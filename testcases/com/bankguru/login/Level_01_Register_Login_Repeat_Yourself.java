@@ -22,7 +22,7 @@ public class Level_01_Register_Login_Repeat_Yourself {
 		driver = new FirefoxDriver();
 		driver.get("http://demo.guru99.com/V4/index.php");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		
+		   
 		loginPageURL = driver.getCurrentUrl();
 	}
 	

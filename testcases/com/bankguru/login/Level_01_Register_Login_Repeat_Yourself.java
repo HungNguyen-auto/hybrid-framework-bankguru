@@ -11,7 +11,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Level_01_Register_Login {
+public class Level_01_Register_Login_Repeat_Yourself {
 	WebDriver driver;
 	String username, password, loginPageURL;
 	String projectLocation = System.getProperty("user.dir");

@@ -2,7 +2,9 @@
 <suite parallel="false" name="BankGuru">
   <test name="Run on Firefox">
     <classes>
-      <class name="com.bankguru.login.Level_01_Register_Login"/>
+    <class name="com.bankguru.login.Level_02_Register_Login_Base_Page_1"/>
+    <class name="com.bankguru.login.Level_03_Register_Login_Base_Page_2"/>
+    <class name="com.bankguru.login.Level_04_Register_Login_Base_Page_4"/>
     </classes>
   </test>
 </suite>

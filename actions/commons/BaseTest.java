@@ -7,36 +7,44 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseTest {
-	private String projectLocation = System.getProperty("user.dir");
+	//private String projectLocation = System.getProperty("user.dir");
 	private WebDriver driver;
-	public WebDriver getBrowserDriver(String browserName) {
-		if(browserName.equalsIgnoreCase("firefox"))
+	
+	private enum BROWSER {
+		CHROME, FIREFOX, IE, SAFARI, ED_LEGACY, EDGE_CHROMIUM, H_CHROME, H_FIREFOX;
+	}
+	
+	protected WebDriver getBrowserDriver(String browserName) {
+		BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
+		if(browser == BROWSER.FIREFOX)
 		{
-			System.setProperty("webdriver.gecko.driver", projectLocation + "\\browserDrivers\\geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-		} else if(browserName.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", projectLocation + "\\browserDrivers\\chromedriver.exe");
+		} else if(browser == BROWSER.CHROME) {
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-		} else if(browserName.equalsIgnoreCase("edge_chromium")){
-			System.setProperty("webdriver.edge.driver", projectLocation + "\\browserDrivers\\msedgedriver.exe");
+		} else if(browser == BROWSER.EDGE_CHROMIUM){
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		} else {
 			throw new RuntimeException("Please enter browser name!");
 		}
 		return driver;
 	}
-	public WebDriver getBrowserDriver(String browserName, String url) {
-		if(browserName.equalsIgnoreCase("firefox"))
+	protected WebDriver getBrowserDriver(String browserName, String url) {
+		BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
+		if(browser == BROWSER.FIREFOX)
 		{
-			System.setProperty("webdriver.gecko.driver", projectLocation + "\\browserDrivers\\geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-			
-		} else if(browserName.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", projectLocation + "\\browserDrivers\\chromedriver.exe");
+		} else if(browser == BROWSER.CHROME) {
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-		} else if(browserName.equalsIgnoreCase("edge_chromium")){
-			System.setProperty("webdriver.edge.driver", projectLocation + "\\browserDrivers\\msedgedriver.exe");
+		} else if(browser == BROWSER.EDGE_CHROMIUM){
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		} else {
 			throw new RuntimeException("Please enter browser name!");

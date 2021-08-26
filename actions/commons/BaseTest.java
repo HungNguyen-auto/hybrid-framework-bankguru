@@ -1,5 +1,6 @@
 package commons;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -50,7 +51,12 @@ public class BaseTest {
 			throw new RuntimeException("Please enter browser name!");
 		}
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get("http://live.demoguru99.com/index.php/");
+		driver.get(url);
 		return driver;
 	}
+	
+	public String generateRandomEmail() {
+		Random rand = new Random();
+		return "henry" + rand.nextInt(9999) + "@gmail.com";
+}
 }

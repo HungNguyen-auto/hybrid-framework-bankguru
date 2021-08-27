@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import commons.BasePageFactory;
+import pageObjects.nopCommerce.HomePageObject;
+import pageObjects.nopCommerce.PageGeneratorManager;
 
 public class LoginPageObject extends BasePageFactory{
 	private WebDriver driver;
@@ -33,11 +35,12 @@ public class LoginPageObject extends BasePageFactory{
 		sendkeyToElement(driver, passwordTextbox, password);
 	}
 
-	public void clickToLoginButton() {
+	public HomePageObject clickToLoginButton() {
 		waitForElementClickable(driver, loginLink);
 		scrollToElement(driver, loginLink);
 		sleepInSecond(1);
 		clickToElement(driver, loginLink);
+		return PageGeneratorManager.getHomePage(driver);
 	}
 
 }

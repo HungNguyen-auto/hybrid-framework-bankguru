@@ -1,7 +1,6 @@
 package com.nopccomerce.login;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -13,11 +12,10 @@ import pageFactory.nopCommerce.HomePageObject;
 import pageFactory.nopCommerce.LoginPageObject;
 import pageFactory.nopCommerce.RegisterPageObject;
 
-
 public class Level_05_Register_Login_Page_Factory extends BaseTest {
 	WebDriver driver;
 	String emailAddress, password;
-	
+
 	HomePageObject homePage;
 	RegisterPageObject registerPage;
 	LoginPageObject loginPage;
@@ -58,7 +56,7 @@ public class Level_05_Register_Login_Page_Factory extends BaseTest {
 		
 		Assert.assertTrue(registerPage.isSuccessMessageDisplay());
 		
-		registerPage.clickToLoginLink();
+		registerPage.clickToLogoutLink();
 
 		Assert.assertTrue(homePage.isHomePageSliderDisplayed());
 	}

@@ -59,7 +59,7 @@ public class Level_01_Register_Login_Page_Object {
 		
 		Assert.assertTrue(registerPage.isSuccessMessageDisplay());
 		
-		registerPage.clickToLoginLink();
+		registerPage.clickToLogoutLink();
 
 		Assert.assertTrue(homePage.isHomePageSliderDisplayed());
 	}

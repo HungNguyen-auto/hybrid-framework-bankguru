@@ -6,6 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import commons.BasePageFactory;
+import pageObjects.nopCommerce.LoginPageObject;
+import pageObjects.nopCommerce.PageGeneratorManager;
+import pageObjects.nopCommerce.RegisterPageObject;
 
 public class HomePageObject extends BasePageFactory {
 	private WebDriver driver;
@@ -24,9 +27,10 @@ public class HomePageObject extends BasePageFactory {
 		PageFactory.initElements(driver, this);
 	}
 	//Action
-	public void clickToRegisterLink() {
+	public RegisterPageObject clickToRegisterLink() {
 		waitForElementClickable(driver, registerLink);
 		clickToElement(driver, registerLink);
+		return PageGeneratorManager.getRegisterPage(driver);
 	}
 
 	public boolean isHomePageSliderDisplayed() {
@@ -34,9 +38,9 @@ public class HomePageObject extends BasePageFactory {
 		return isElementDisplayed(driver, homePageSlider);
 	}
 
-	public void clickToLoginLink() {
+	public LoginPageObject clickToLoginLink() {
 		waitForElementClickable(driver, loginLink);
 		clickToElement(driver, loginLink);
+		return PageGeneratorManager.getLoginPage(driver);
 	}
-
 }

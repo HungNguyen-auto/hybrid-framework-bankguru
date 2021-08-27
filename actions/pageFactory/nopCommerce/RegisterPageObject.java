@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import commons.BasePageFactory;
-import pageUIs.nopCommerce.RegisterPageUI;
 
 public class RegisterPageObject extends BasePageFactory {
 	private WebDriver driver;
@@ -83,10 +82,9 @@ public class RegisterPageObject extends BasePageFactory {
 		return isElementDisplayed(driver, successMessage);
 	}
 
-	public void clickToLoginLink() {
+	public void clickToLogoutLink() {
 		waitForElementClickable(driver, logoutLink);
 		scrollToElement(driver, logoutLink);
 		clickToElement(driver, logoutLink);
 	}
-
 }

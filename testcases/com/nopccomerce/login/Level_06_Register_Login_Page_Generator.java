@@ -19,7 +19,7 @@ public class Level_06_Register_Login_Page_Generator extends BaseTest {
     HomePageObject homePage;
     RegisterPageObject registerPage;
     LoginPageObject loginPage;
-    //test commit
+    //test commit testtttttttttttttt
     @Parameters({"browser", "url"})
     @BeforeClass
     public void beforeClass(String browserName, String appUrl) {

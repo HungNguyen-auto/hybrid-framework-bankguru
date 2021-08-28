@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="BankGuru">
 	<parameter name="url" value="https://demo.nopcommerce.com/" />
-	<test name="Run on Firefox">
-		<parameter name="browser" value="firefox" />
+	<test name="Run on Chrome">
+		<parameter name="browser" value="chrome" />
 		<classes>
 			<class
-				name="com.nopccomerce.login.Level_06_Register_Login_Page_Generator" />
+				name="com.nopccomerce.login.Level_07_Register_Login_Switch_Page" />
 		</classes>
 	</test>
 </suite>

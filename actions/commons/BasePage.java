@@ -15,6 +15,11 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObjects.nopCommerce.MyAccountPageObject;
+import pageObjects.nopCommerce.OrdersPageObject;
+import pageObjects.nopCommerce.PageGeneratorManager;
+import pageObjects.nopCommerce.SearchPageObject;
+import pageUIs.nopCommerce.*;
 
 public class BasePage {
 	private Alert alert;
@@ -372,4 +377,23 @@ public class BasePage {
 			e.printStackTrace();
 		}
 	}
+
+	public SearchPageObject openSearchPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.SEARCH_LINK);
+		clickToElement(driver, BasePageUI.SEARCH_LINK);
+		return PageGeneratorManager.getSearchPage(driver);
+	}
+
+	public MyAccountPageObject openMyAccountPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.MYACCOUNT_LINK);
+		clickToElement(driver, BasePageUI.MYACCOUNT_LINK);
+		return PageGeneratorManager.getMyAccountPage(driver);
+	}
+
+	public OrdersPageObject openOrdersPage(WebDriver driver) {
+		waitForElementClickable(driver, BasePageUI.ORDERS_LINK);
+		clickToElement(driver, BasePageUI.ORDERS_LINK);
+		return PageGeneratorManager.getOrdersPage(driver);
+	}
+
 }

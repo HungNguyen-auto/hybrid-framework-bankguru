@@ -1,17 +1,18 @@
 package commons;
 
+import java.io.File;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
-	//private String projectLocation = System.getProperty("user.dir");
+	private String projectLocation = System.getProperty("user.dir");
 	private WebDriver driver;
 	
 	private enum BROWSER {
@@ -26,6 +27,9 @@ public class BaseTest {
 			driver = new FirefoxDriver();
 		} else if(browser == BROWSER.CHROME) {
 			WebDriverManager.chromedriver().setup();
+//			File file = new File(projectLocation + "\\browserExtensions\\adblock.crx");
+//			ChromeOptions options = new ChromeOptions();
+//			options.addExtensions(file);
 			driver = new ChromeDriver();
 		} else if(browser == BROWSER.EDGE_CHROMIUM){
 			WebDriverManager.edgedriver().setup();

@@ -5,7 +5,7 @@
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class
-				name="com.nopccomerce.login.Level_07_Register_Login_Switch_Page" />
+				name="com.nopccomerce.login.Level_08_Register_Login_Dynamic_Locator" />
 		</classes>
 	</test>
 </suite>

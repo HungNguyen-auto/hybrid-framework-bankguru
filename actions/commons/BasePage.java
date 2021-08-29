@@ -19,8 +19,8 @@ import pageUIs.nopCommerce.*;
 public class BasePage {
 	private Alert alert;
 	WebDriverWait explicitWait;
-	private long shortTimeout = GlobalContants.SHORT_TIMEOUT;
-	private long longTimeout = GlobalContants.LONG_TIMEOUT;
+	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;
+	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
 	private Select select;
 	private JavascriptExecutor jsExecutor;
 	private Actions action;
@@ -157,6 +157,9 @@ public class BasePage {
 	public int getElementSize(WebDriver driver, String locator) {
 		return getElements(driver, locator).size();
 	}
+	public int getElementSize(WebDriver driver, String locator, String...params) {
+		return getElements(driver, getDynamicLocator(locator, params)).size();
+	}
 
 	public void selectDropdownByText(WebDriver driver, String locator, String itemText) {
 		select = new Select(getElement(driver, locator));
@@ -270,6 +273,12 @@ public class BasePage {
 
 	public void pressKeyToElement(WebDriver driver, String locator, Keys key) {
 		action = new Actions(driver);
+		action.sendKeys(getElement(driver, locator), key).perform();
+	}
+
+	public void pressKeyToElement(WebDriver driver, String locator, Keys key, String... params) {
+		action = new Actions(driver);
+		locator = getDynamicLocator(locator,params);
 		action.sendKeys(getElement(driver, locator), key).perform();
 	}
 

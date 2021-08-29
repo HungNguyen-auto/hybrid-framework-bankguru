@@ -96,4 +96,5 @@ public class Level_07_Register_Login_Switch_Page extends BaseTest {
 //    public void afterClass() {
 //        driver.quit();
 //    }
+    // test commit
 }

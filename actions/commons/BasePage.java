@@ -10,17 +10,19 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObjects.adminNopCommerce.ProductPageObject;
 import pageObjects.nopCommerce.MyAccountPageObject;
 import pageObjects.nopCommerce.OrdersPageObject;
 import pageObjects.nopCommerce.PageGeneratorManager;
 import pageObjects.nopCommerce.SearchPageObject;
+import pageUIs.adminNopCommerce.AdminBasePageUI;
 import pageUIs.nopCommerce.*;
 
 public class BasePage {
 	private Alert alert;
 	WebDriverWait explicitWait;
-	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;
 	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
+	private long shortTimeout = GlobalConstants.SHORT_TIMEOUT;
 	private Select select;
 	private JavascriptExecutor jsExecutor;
 	private Actions action;
@@ -58,7 +60,7 @@ public class BasePage {
 	}
 
 	public Alert waitForAlertPresence(WebDriver driver) {
-		explicitWait = new WebDriverWait(driver, shortTimeout);
+		explicitWait = new WebDriverWait(driver, longTimeout);
 		return explicitWait.until(ExpectedConditions.alertIsPresent());
 	}
 
@@ -127,6 +129,10 @@ public class BasePage {
 		return driver.findElement(getByXpath(locator));
 	}
 
+	public WebElement getElement(WebDriver driver, String locator, String...params) {
+		return driver.findElement(getByXpath(getDynamicLocator(locator,params)));
+	}
+
 	public List<WebElement> getElements(WebDriver driver, String locator) {
 		return driver.findElements(getByXpath(locator));
 	}
@@ -180,7 +186,7 @@ public class BasePage {
 		getElement(driver, parentLocator).click();
 		sleepInSecond(1);
 
-		explicitWait = new WebDriverWait(driver, shortTimeout);
+		explicitWait = new WebDriverWait(driver, longTimeout);
 
 		List<WebElement> allItems = explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByXpath(childItemLocator)));
 
@@ -198,7 +204,9 @@ public class BasePage {
 	public String getAttributeValue(WebDriver driver, String locator, String attributeName) {
 		return getElement(driver, locator).getAttribute(attributeName);
 	}
-
+	public String getAttributeValue(WebDriver driver, String locator, String attributeName, String...params) {
+		return getElement(driver, getDynamicLocator(locator,params)).getAttribute(attributeName);
+	}
 	public String getTextElement(WebDriver driver, String locator) {
 		return getElement(driver, locator).getText();
 	}
@@ -338,7 +346,7 @@ public class BasePage {
 	}
 
 	public boolean areJQueryAndJSLoadedSuccess(WebDriver driver) {
-		explicitWait = new WebDriverWait(driver, shortTimeout);
+		explicitWait = new WebDriverWait(driver, longTimeout);
 		jsExecutor = (JavascriptExecutor) driver;
 
 		ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
@@ -378,37 +386,37 @@ public class BasePage {
 	}
 
 	public void waitForElementVisible(WebDriver driver, String locator) {
-		explicitWait = new WebDriverWait(driver, shortTimeout);
+		explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(locator)));
 	}
 
 	public void waitForElementVisible(WebDriver driver, String locator, String... params) {
-		explicitWait = new WebDriverWait(driver, shortTimeout);
+		explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(getDynamicLocator(locator, params))));
 	}
 
 	public void waitForAllElementsVisible(WebDriver driver, String locator) {
-		explicitWait = new WebDriverWait(driver, shortTimeout);
+		explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByXpath(locator)));
 	}
 
 	public void waitForElementClickable(WebDriver driver, String locator) {
-		explicitWait = new WebDriverWait(driver, shortTimeout);
+		explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(locator)));
 	}
 
 	public void waitForElementClickable(WebDriver driver, String locator, String... params) {
-		explicitWait = new WebDriverWait(driver, shortTimeout);
+		explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(getDynamicLocator(locator, params))));
 	}
 
 	public void waitForElementInvisible(WebDriver driver, String locator) {
-		explicitWait = new WebDriverWait(driver, shortTimeout);
+		explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(locator)));
 	}
 
 	public void waitForElementInvisible(WebDriver driver, String locator, String... params) {
-		explicitWait = new WebDriverWait(driver, shortTimeout);
+		explicitWait = new WebDriverWait(driver, longTimeout);
 		explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(getDynamicLocator(locator, params))));
 	}
 
@@ -420,6 +428,7 @@ public class BasePage {
 		}
 	}
 
+	// User - Nopccomerce
 	public SearchPageObject openSearchPage(WebDriver driver) {
 		waitForElementClickable(driver, BasePageUI.SEARCH_LINK);
 		clickToElement(driver, BasePageUI.SEARCH_LINK);
@@ -455,5 +464,22 @@ public class BasePage {
 	public void openFooterPageByName(WebDriver driver, String pageName) {
 		waitForElementClickable(driver, BasePageUI.DYNAMIC_FOOTER_PAGE, pageName);
 		clickToElement(driver, BasePageUI.DYNAMIC_FOOTER_PAGE, pageName);
+	}
+	//Admin Nopcommerce
+	public void openSubMenuByName(WebDriver driver, String menuName, String subMenuName) {
+		waitForElementClickable(driver, AdminBasePageUI.MENU_LINK_BY_NAME, menuName);
+		clickToElement(driver, AdminBasePageUI.MENU_LINK_BY_NAME, menuName);
+
+		waitForElementClickable(driver, AdminBasePageUI.SUB_MENU_LINK_BY_NAME, subMenuName);
+		clickToElement(driver, AdminBasePageUI.SUB_MENU_LINK_BY_NAME, subMenuName);
+	}
+	public void uploadFilesByCardName(WebDriver driver, String cardName,String...fileNames){
+		String filePath = GlobalConstants.UPLOAD_FOLDER_PATH;
+		String fullFileName = "";
+		for (String file : fileNames){
+			fullFileName = fullFileName + filePath + file + "\n";
+		}
+		fullFileName = fullFileName.trim();
+		getElement(driver,  AdminBasePageUI.UPLOAD_FILE_BY_CARD_NAME, cardName).sendKeys(fullFileName);
 	}
 }

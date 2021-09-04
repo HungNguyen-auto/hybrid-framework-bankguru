@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="AdminNopCommerce">
 	<parameter name="url" value="https://admin-demo.nopcommerce.com/" />
-	<test name="Run on Firefox">
+	<test name="Run on Chrome">
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class

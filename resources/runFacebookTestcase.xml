@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Register_Facebook">
+	<parameter name="url" value="https://www.facebook.com/r.php" />
+	<test name="Run on Firefox">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class
+				name="com.facebook.Level_11_Register" />
+		</classes>
+	</test>
+</suite>

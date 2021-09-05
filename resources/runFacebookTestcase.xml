@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="Register_Facebook">
+	<listeners>
+		<listener class-name="commons.MethodListener" />
+	</listeners>
 	<parameter name="url" value="https://www.facebook.com/r.php" />
 	<test name="Run on Firefox">
 		<parameter name="browser" value="firefox" />
 		<classes>
 			<class
-				name="com.facebook.Level_11_Register" />
+				name="com.facebook.Level_12_Register_Assert_Verify" />
 		</classes>
 	</test>
 </suite>

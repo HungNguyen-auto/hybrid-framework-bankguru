@@ -1,0 +1,233 @@
+[INFO ] [2021-09-05 20:55:57,850] Pre-Condition: Open browser 'chrome'and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-05 20:56:02,864] User_01_Register - Steps 01: Verify Home Page is displayed
+[INFO ] [2021-09-05 20:56:02,971]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-05 20:56:02,972] User_01_Register - Steps 02: Click to Register Link
+[INFO ] [2021-09-05 20:56:04,448] User_01_Register - Steps 03: Click to Male radio  button
+[INFO ] [2021-09-05 20:56:04,547] User_01_Register - Steps 04: Input to Firstname textbox
+[INFO ] [2021-09-05 20:56:04,661] User_01_Register - Steps 05: Input to Lasttname textbox
+[INFO ] [2021-09-05 20:56:04,780] User_01_Register - Steps 06: Input to Email textbox
+[INFO ] [2021-09-05 20:56:04,924] User_01_Register - Steps 07: Input to Password textbox
+[INFO ] [2021-09-05 20:56:05,036] User_01_Register - Steps 08: Input to Confirmation textbox
+[INFO ] [2021-09-05 20:56:05,154] User_01_Register - Steps 09: Click to Register button
+[INFO ] [2021-09-05 20:56:07,274] User_01_Register - Steps 10: Verify Success message is displayed
+[INFO ] [2021-09-05 20:56:07,319]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-05 20:56:07,319] User_01_Register - Steps 11: Click to Logout link
+[INFO ] [2021-09-05 20:56:08,185] User_01_Register - Steps 12: Verify Home Page Slider is displayed
+[INFO ] [2021-09-05 20:56:08,266]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-05 20:56:08,269] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-05 20:56:09,408] User_02_Register - Steps 02: Input to Email textbox with value: henry7310@gmail.com
+[INFO ] [2021-09-05 20:56:09,527] User_02_Register - Steps 03: Input to Password textbox with value: 1234aa
+[INFO ] [2021-09-05 20:56:09,646] User_02_Register - Steps 05: Click to Login button
+[INFO ] [2021-09-05 20:56:11,227] User_02_Register - Steps 05: Verify Home Page Slider is displayed
+[INFO ] [2021-09-05 20:56:11,277]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-05 20:56:11,279] Post-Condition: Close browser
+[INFO ] [2021-09-05 21:01:00,487] Pre-Condition: Open browser 'chrome'and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-05 21:02:25,963] Pre-Condition: Open browser 'chrome'and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-05 21:11:27,278] Pre-Condition: Open browser 'chrome'and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-05 21:11:48,879] Pre-Condition: Open browser 'chrome'and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-05 21:11:53,062] User_01_Register - Steps 01: Verify Home Page is displayed
+[INFO ] [2021-09-05 21:11:53,189]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-05 21:11:53,190] User_01_Register - Steps 02: Click to Register Link
+[INFO ] [2021-09-05 21:11:54,639] User_01_Register - Steps 03: Click to Male radio  button
+[INFO ] [2021-09-05 21:11:54,738] User_01_Register - Steps 04: Input to Firstname textbox
+[INFO ] [2021-09-05 21:11:54,860] User_01_Register - Steps 05: Input to Lasttname textbox
+[INFO ] [2021-09-05 21:11:54,997] User_01_Register - Steps 06: Input to Email textbox
+[INFO ] [2021-09-05 21:11:55,137] User_01_Register - Steps 07: Input to Password textbox
+[INFO ] [2021-09-05 21:11:55,252] User_01_Register - Steps 08: Input to Confirmation textbox
+[INFO ] [2021-09-05 21:11:55,372] User_01_Register - Steps 09: Click to Register button
+[INFO ] [2021-09-05 21:11:56,234] User_01_Register - Steps 10: Verify Success message is displayed
+[INFO ] [2021-09-05 21:11:56,282]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-05 21:11:56,282] User_01_Register - Steps 11: Click to Logout link
+[INFO ] [2021-09-05 21:11:57,127] User_01_Register - Steps 12: Verify Home Page Slider is displayed
+[INFO ] [2021-09-05 21:11:57,177]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-05 21:11:57,182] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-05 21:11:57,799] User_02_Register - Steps 02: Input to Email textbox with value: henry3988@gmail.com
+[INFO ] [2021-09-05 21:11:57,913] User_02_Register - Steps 03: Input to Password textbox with value: 1234aa
+[INFO ] [2021-09-05 21:11:58,027] User_02_Register - Steps 05: Click to Login button
+[INFO ] [2021-09-05 21:11:59,481] User_02_Register - Steps 05: Verify Home Page Slider is displayed
+[INFO ] [2021-09-05 21:11:59,525]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-05 21:11:59,528] Post-Condition: Close browser
+[INFO ] [2021-09-07 21:48:29,770] Pre-Condition: Open browser 'chrome' and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-07 21:48:37,012] User_01_Register - Steps 01: Verify Home Page is displayed
+[INFO ] [2021-09-07 21:48:37,157]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 21:48:37,159] User_01_Register - Steps 02: Click to Register Link
+[INFO ] [2021-09-07 21:48:38,580] User_01_Register - Steps 03: Click to Male radio  button
+[INFO ] [2021-09-07 21:48:38,695] User_01_Register - Steps 04: Input to Firstname textbox
+[INFO ] [2021-09-07 21:48:39,154] User_01_Register - Steps 05: Input to Lasttname textbox
+[INFO ] [2021-09-07 21:48:39,311] User_01_Register - Steps 06: Input to Email textbox
+[INFO ] [2021-09-07 21:48:39,480] User_01_Register - Steps 07: Input to Password textbox
+[INFO ] [2021-09-07 21:48:39,598] User_01_Register - Steps 08: Input to Confirmation textbox
+[INFO ] [2021-09-07 21:48:39,710] User_01_Register - Steps 09: Click to Register button
+[INFO ] [2021-09-07 21:48:42,030] User_01_Register - Steps 10: Verify Success message is displayed
+[INFO ] [2021-09-07 21:48:42,082]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 21:48:42,083] User_01_Register - Steps 11: Click to Logout link
+[INFO ] [2021-09-07 21:48:43,713] User_01_Register - Steps 12: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 21:48:43,786]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 21:48:43,793] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-07 21:48:44,354] User_02_Register - Steps 02: Input to Email textbox with value: henry8640@gmail.com
+[INFO ] [2021-09-07 21:48:44,524] User_02_Register - Steps 03: Input to Password textbox with value: 1234aa
+[INFO ] [2021-09-07 21:48:44,635] User_02_Register - Steps 05: Click to Login button
+[INFO ] [2021-09-07 21:48:47,035] User_02_Register - Steps 05: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 21:48:47,096]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 21:48:47,097] Post-Condition: Close browser
+[INFO ] [2021-09-07 22:11:10,700] Pre-Condition: Open browser 'chrome' and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-07 22:11:15,408] User_01_Register - Steps 01: Verify Home Page is displayed
+[INFO ] [2021-09-07 22:11:15,580]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:11:15,582] User_01_Register - Steps 02: Click to Register Link
+[INFO ] [2021-09-07 22:11:17,094] User_01_Register - Steps 03: Click to Male radio  button
+[INFO ] [2021-09-07 22:11:17,195] User_01_Register - Steps 04: Input to Firstname textbox
+[INFO ] [2021-09-07 22:11:17,347] User_01_Register - Steps 05: Input to Lasttname textbox
+[INFO ] [2021-09-07 22:11:17,515] User_01_Register - Steps 06: Input to Email textbox
+[INFO ] [2021-09-07 22:11:17,687] User_01_Register - Steps 07: Input to Password textbox
+[INFO ] [2021-09-07 22:11:17,811] User_01_Register - Steps 08: Input to Confirmation textbox
+[INFO ] [2021-09-07 22:11:17,935] User_01_Register - Steps 09: Click to Register button
+[INFO ] [2021-09-07 22:11:20,079] User_01_Register - Steps 10: Verify Success message is displayed
+[INFO ] [2021-09-07 22:11:20,131]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:11:20,131] User_01_Register - Steps 11: Click to Logout link
+[INFO ] [2021-09-07 22:11:22,357] User_01_Register - Steps 12: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 22:11:22,403]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:11:22,406] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-07 22:11:23,507] User_02_Register - Steps 02: Input to Email textbox with value: henry9915@gmail.com
+[INFO ] [2021-09-07 22:11:23,642] User_02_Register - Steps 03: Input to Password textbox with value: 1234aa
+[INFO ] [2021-09-07 22:11:23,753] User_02_Register - Steps 05: Click to Login button
+[INFO ] [2021-09-07 22:11:24,879] User_02_Register - Steps 05: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 22:11:24,926]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:11:24,928] Post-Condition: Close browser
+[INFO ] [2021-09-07 22:15:25,363] Pre-Condition: Open browser 'chrome' and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-07 22:15:30,693] User_01_Register - Steps 01: Verify Home Page is displayed
+[INFO ] [2021-09-07 22:15:30,810]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:15:30,812] User_01_Register - Steps 02: Click to Register Link
+[INFO ] [2021-09-07 22:15:32,207] User_01_Register - Steps 03: Click to Male radio  button
+[INFO ] [2021-09-07 22:15:32,332] User_01_Register - Steps 04: Input to Firstname textbox
+[INFO ] [2021-09-07 22:15:32,466] User_01_Register - Steps 05: Input to Lasttname textbox
+[INFO ] [2021-09-07 22:15:32,590] User_01_Register - Steps 06: Input to Email textbox
+[INFO ] [2021-09-07 22:15:32,745] User_01_Register - Steps 07: Input to Password textbox
+[INFO ] [2021-09-07 22:15:32,869] User_01_Register - Steps 08: Input to Confirmation textbox
+[INFO ] [2021-09-07 22:15:32,998] User_01_Register - Steps 09: Click to Register button
+[INFO ] [2021-09-07 22:15:35,084] User_01_Register - Steps 10: Verify Success message is displayed
+[INFO ] [2021-09-07 22:15:35,135]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:15:35,135] User_01_Register - Steps 11: Click to Logout link
+[INFO ] [2021-09-07 22:15:36,702] User_01_Register - Steps 12: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 22:15:36,748]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-09-07 22:15:36,753] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-07 22:15:37,828] User_02_Register - Steps 02: Input to Email textbox with value: henry8385@gmail.com
+[INFO ] [2021-09-07 22:15:38,023] User_02_Register - Steps 03: Input to Password textbox with value: 1234aa
+[INFO ] [2021-09-07 22:15:38,151] User_02_Register - Steps 05: Click to Login button
+[INFO ] [2021-09-07 22:15:39,009] User_02_Register - Steps 05: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 22:15:39,078]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:15:39,081] Post-Condition: Close browser
+[INFO ] [2021-09-07 22:16:54,473] Pre-Condition: Open browser 'chrome' and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-07 22:16:59,212] User_01_Register - Steps 01: Verify Home Page is displayed
+[INFO ] [2021-09-07 22:16:59,327]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:16:59,328] User_01_Register - Steps 02: Click to Register Link
+[INFO ] [2021-09-07 22:17:00,108] User_01_Register - Steps 03: Click to Male radio  button
+[INFO ] [2021-09-07 22:17:00,248] User_01_Register - Steps 04: Input to Firstname textbox
+[INFO ] [2021-09-07 22:17:00,406] User_01_Register - Steps 05: Input to Lasttname textbox
+[INFO ] [2021-09-07 22:17:00,595] User_01_Register - Steps 06: Input to Email textbox
+[INFO ] [2021-09-07 22:17:00,771] User_01_Register - Steps 07: Input to Password textbox
+[INFO ] [2021-09-07 22:17:00,907] User_01_Register - Steps 08: Input to Confirmation textbox
+[INFO ] [2021-09-07 22:17:01,038] User_01_Register - Steps 09: Click to Register button
+[INFO ] [2021-09-07 22:17:02,512] User_01_Register - Steps 10: Verify Success message is displayed
+[INFO ] [2021-09-07 22:17:02,573]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:17:02,573] User_01_Register - Steps 11: Click to Logout link
+[INFO ] [2021-09-07 22:17:04,167] User_01_Register - Steps 12: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 22:17:04,218]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-09-07 22:17:04,225] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-07 22:17:04,728] User_02_Register - Steps 02: Input to Email textbox with value: henry2855@gmail.com
+[INFO ] [2021-09-07 22:17:04,847] User_02_Register - Steps 03: Input to Password textbox with value: 1234aa
+[INFO ] [2021-09-07 22:17:04,956] User_02_Register - Steps 05: Click to Login button
+[INFO ] [2021-09-07 22:17:06,565] User_02_Register - Steps 05: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 22:17:06,632]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:17:06,633] Post-Condition: Close browser
+[INFO ] [2021-09-07 22:24:57,560] Pre-Condition: Open browser 'firefox' and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-07 22:24:57,560] Pre-Condition: Open browser 'chrome' and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-07 22:24:57,560] Pre-Condition: Open browser 'EDGE_CHROMIUM' and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-07 22:25:03,488] User_01_Register - Steps 01: Verify Home Page is displayed
+[INFO ] [2021-09-07 22:25:03,963]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:25:03,965] User_01_Register - Steps 02: Click to Register Link
+[INFO ] [2021-09-07 22:25:05,598] User_01_Register - Steps 03: Click to Male radio  button
+[INFO ] [2021-09-07 22:25:05,794] User_01_Register - Steps 04: Input to Firstname textbox
+[INFO ] [2021-09-07 22:25:06,056] User_01_Register - Steps 05: Input to Lasttname textbox
+[INFO ] [2021-09-07 22:25:06,328] User_01_Register - Steps 06: Input to Email textbox
+[INFO ] [2021-09-07 22:25:07,014] User_01_Register - Steps 07: Input to Password textbox
+[INFO ] [2021-09-07 22:25:07,718] User_01_Register - Steps 08: Input to Confirmation textbox
+[INFO ] [2021-09-07 22:25:07,995] User_01_Register - Steps 09: Click to Register button
+[INFO ] [2021-09-07 22:25:09,172] User_01_Register - Steps 01: Verify Home Page is displayed
+[INFO ] [2021-09-07 22:25:09,277]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:25:09,277] User_01_Register - Steps 02: Click to Register Link
+[INFO ] [2021-09-07 22:25:09,634] User_01_Register - Steps 10: Verify Success message is displayed
+[INFO ] [2021-09-07 22:25:09,725]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:25:09,726] User_01_Register - Steps 11: Click to Logout link
+[INFO ] [2021-09-07 22:25:10,180] User_01_Register - Steps 01: Verify Home Page is displayed
+[INFO ] [2021-09-07 22:25:10,291]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:25:10,292] User_01_Register - Steps 02: Click to Register Link
+[INFO ] [2021-09-07 22:25:11,115] User_01_Register - Steps 03: Click to Male radio  button
+[INFO ] [2021-09-07 22:25:11,482] User_01_Register - Steps 04: Input to Firstname textbox
+[INFO ] [2021-09-07 22:25:11,646] User_01_Register - Steps 05: Input to Lasttname textbox
+[INFO ] [2021-09-07 22:25:11,788] User_01_Register - Steps 06: Input to Email textbox
+[INFO ] [2021-09-07 22:25:11,923] User_01_Register - Steps 07: Input to Password textbox
+[INFO ] [2021-09-07 22:25:12,023] User_01_Register - Steps 12: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 22:25:12,029] User_01_Register - Steps 08: Input to Confirmation textbox
+[INFO ] [2021-09-07 22:25:12,128]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-09-07 22:25:12,138] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-07 22:25:12,189] User_01_Register - Steps 09: Click to Register button
+[INFO ] [2021-09-07 22:25:12,408] User_01_Register - Steps 03: Click to Male radio  button
+[INFO ] [2021-09-07 22:25:12,572] User_01_Register - Steps 04: Input to Firstname textbox
+[INFO ] [2021-09-07 22:25:12,748] User_01_Register - Steps 05: Input to Lasttname textbox
+[INFO ] [2021-09-07 22:25:12,929] User_01_Register - Steps 06: Input to Email textbox
+[INFO ] [2021-09-07 22:25:13,135] User_01_Register - Steps 07: Input to Password textbox
+[INFO ] [2021-09-07 22:25:13,321] User_01_Register - Steps 08: Input to Confirmation textbox
+[INFO ] [2021-09-07 22:25:13,441] User_02_Register - Steps 02: Input to Email textbox with value: henry1871@gmail.com
+[INFO ] [2021-09-07 22:25:13,542] User_01_Register - Steps 09: Click to Register button
+[INFO ] [2021-09-07 22:25:13,689] User_02_Register - Steps 03: Input to Password textbox with value: 1234aa
+[INFO ] [2021-09-07 22:25:13,839] User_02_Register - Steps 05: Click to Login button
+[INFO ] [2021-09-07 22:25:14,289] User_01_Register - Steps 10: Verify Success message is displayed
+[INFO ] [2021-09-07 22:25:14,351]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:25:14,352] User_01_Register - Steps 11: Click to Logout link
+[INFO ] [2021-09-07 22:25:15,104] User_01_Register - Steps 10: Verify Success message is displayed
+[INFO ] [2021-09-07 22:25:15,154]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:25:15,155] User_01_Register - Steps 11: Click to Logout link
+[INFO ] [2021-09-07 22:25:15,445] User_02_Register - Steps 05: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 22:25:15,504]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:25:15,505] Post-Condition: Close browser
+[INFO ] [2021-09-07 22:25:16,558] User_01_Register - Steps 12: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 22:25:16,702]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-09-07 22:25:16,705] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-07 22:25:16,919] User_01_Register - Steps 12: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 22:25:16,970]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-09-07 22:25:16,972] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-07 22:25:17,256] User_02_Register - Steps 02: Input to Email textbox with value: henry6948@gmail.com
+[INFO ] [2021-09-07 22:25:17,396] User_02_Register - Steps 03: Input to Password textbox with value: 1234aa
+[INFO ] [2021-09-07 22:25:17,498] User_02_Register - Steps 05: Click to Login button
+[INFO ] [2021-09-07 22:25:17,661] User_02_Register - Steps 02: Input to Email textbox with value: henry9319@gmail.com
+[INFO ] [2021-09-07 22:25:17,896] User_02_Register - Steps 03: Input to Password textbox with value: 1234aa
+[INFO ] [2021-09-07 22:25:18,032] User_02_Register - Steps 05: Click to Login button
+[INFO ] [2021-09-07 22:25:19,716] User_02_Register - Steps 05: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 22:25:19,774]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:25:19,775] Post-Condition: Close browser
+[INFO ] [2021-09-07 22:25:20,124] User_02_Register - Steps 05: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 22:25:20,181]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:25:20,185] Post-Condition: Close browser
+[INFO ] [2021-09-07 22:49:00,136] Pre-Condition: Open browser 'firefox' and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-07 22:49:09,340] User_01_Register - Steps 01: Verify Home Page is displayed
+[INFO ] [2021-09-07 22:49:09,479]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:49:09,481] User_01_Register - Steps 02: Click to Register Link
+[INFO ] [2021-09-07 22:49:10,911] User_01_Register - Steps 03: Click to Male radio  button
+[INFO ] [2021-09-07 22:49:11,192] User_01_Register - Steps 04: Input to Firstname textbox
+[INFO ] [2021-09-07 22:49:11,273] User_01_Register - Steps 05: Input to Lasttname textbox
+[INFO ] [2021-09-07 22:49:11,359] User_01_Register - Steps 06: Input to Email textbox
+[INFO ] [2021-09-07 22:49:11,439] User_01_Register - Steps 07: Input to Password textbox
+[INFO ] [2021-09-07 22:49:11,510] User_01_Register - Steps 08: Input to Confirmation textbox
+[INFO ] [2021-09-07 22:49:11,583] User_01_Register - Steps 09: Click to Register button
+[INFO ] [2021-09-07 22:49:14,058] User_01_Register - Steps 10: Verify Success message is displayed
+[INFO ] [2021-09-07 22:49:14,139]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:49:14,139] User_01_Register - Steps 11: Click to Logout link
+[INFO ] [2021-09-07 22:49:16,276] User_01_Register - Steps 12: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 22:49:16,355]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-09-07 22:49:16,361] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-07 22:49:17,408] User_02_Register - Steps 02: Input to Email textbox with value: henry2092@gmail.com
+[INFO ] [2021-09-07 22:49:17,504] User_02_Register - Steps 03: Input to Password textbox with value: 1234aa
+[INFO ] [2021-09-07 22:49:17,562] User_02_Register - Steps 05: Click to Login button
+[INFO ] [2021-09-07 22:49:20,596] User_02_Register - Steps 05: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 22:49:20,695]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:49:20,699] Post-Condition: Close browser

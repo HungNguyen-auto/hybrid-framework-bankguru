@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite parallel="false" name="BankGuru">
-	<parameter name="url" value="https://demo.nopcommerce.com/" />
-	<test name="Run on Chrome">
-		<parameter name="browser" value="chrome" />
+<suite name="NopCommerce" parallel="tests" thread-count="3">
+<listeners>
+	<listener class-name="org.uncommons.reportng.HTMLReporter" ></listener>
+	<listener class-name="org.uncommons.reportng.JUnitXMLReporter" ></listener>
+	<listener class-name="commons.MethodListener" />
+	<listener class-name="reportConfig.ExtentReportListenerV2" />
+</listeners>
+<parameter name="url" value="https://demo.nopcommerce.com/" /> 
+<!-- 	<test name="Run on Chrome"> -->
+<!-- 		<parameter name="browser" value="chrome" /> -->
+<!-- 		<classes> -->
+<!-- 			<class -->
+<!-- 				name="com.nopccomerce.login.Level_13_Register_Login_Log_Report" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+	
+	<test name="Run on Firefox">
+		<parameter name="browser" value="firefox" />
 		<classes>
 			<class
-				name="com.nopccomerce.login.Level_08_Register_Login_Dynamic_Locator" />
+				name="com.nopccomerce.login.Level_13_Register_Login_Log_Report" />
 		</classes>
 	</test>
+	
+<!-- 	<test name="Run on Edge"> -->
+<!-- 		<parameter name="browser" value="EDGE_CHROMIUM" /> -->
+<!-- 		<classes> -->
+<!-- 			<class -->
+<!-- 				name="com.nopccomerce.login.Level_13_Register_Login_Log_Report" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
 </suite>

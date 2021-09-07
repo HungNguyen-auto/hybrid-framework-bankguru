@@ -15,44 +15,44 @@ public class PageGeneratorManager {
     }
 
     public static HomePageObject getHomePage(WebDriver driver){
-        if(homePage==null){
-            homePage = new HomePageObject(driver);
-        }
-        return homePage;
+//        if(homePage==null){
+//            homePage = new HomePageObject(driver);
+//        }
+        return new HomePageObject(driver);
     }
 
     public static LoginPageObject getLoginPage(WebDriver driver){
-        if(loginPage==null){
-            loginPage = new LoginPageObject(driver);
-        }
-        return loginPage;
+//        if(loginPage==null){
+//            loginPage = new LoginPageObject(driver);
+//        }
+        return new LoginPageObject(driver);
     }
 
     public static RegisterPageObject getRegisterPage(WebDriver driver){
-        if(registerPage==null){
-            registerPage = new RegisterPageObject(driver);
-        }
-        return registerPage;
+//        if(registerPage==null){
+//            registerPage = new RegisterPageObject(driver);
+//        }
+        return new RegisterPageObject(driver);
     }
 
     public static SearchPageObject getSearchPage(WebDriver driver){
-        if(searchPage==null){
-            searchPage = new SearchPageObject(driver);
-        }
-        return searchPage;
+//        if(searchPage==null){
+//            searchPage = new SearchPageObject(driver);
+//        }
+        return new SearchPageObject(driver);
     }
 
     public static OrdersPageObject getOrdersPage(WebDriver driver){
-        if(ordersPage==null){
-            ordersPage = new OrdersPageObject(driver);
-        }
-        return ordersPage;
+//        if(ordersPage==null){
+//            ordersPage = new OrdersPageObject(driver);
+//        }
+        return new OrdersPageObject(driver);
     }
 
     public static MyAccountPageObject getMyAccountPage(WebDriver driver){
-        if(myAccountPage==null){
-            myAccountPage = new MyAccountPageObject(driver);
-        }
-        return myAccountPage;
+//        if(myAccountPage==null){
+//            myAccountPage = new MyAccountPageObject(driver);
+//        }
+        return new MyAccountPageObject(driver);
     }
 }

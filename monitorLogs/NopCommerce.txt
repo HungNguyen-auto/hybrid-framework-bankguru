@@ -1,0 +1,23 @@
+[INFO ] [2021-09-07 22:49:00,136] Pre-Condition: Open browser 'firefox' and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-07 22:49:09,340] User_01_Register - Steps 01: Verify Home Page is displayed
+[INFO ] [2021-09-07 22:49:09,479]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:49:09,481] User_01_Register - Steps 02: Click to Register Link
+[INFO ] [2021-09-07 22:49:10,911] User_01_Register - Steps 03: Click to Male radio  button
+[INFO ] [2021-09-07 22:49:11,192] User_01_Register - Steps 04: Input to Firstname textbox
+[INFO ] [2021-09-07 22:49:11,273] User_01_Register - Steps 05: Input to Lasttname textbox
+[INFO ] [2021-09-07 22:49:11,359] User_01_Register - Steps 06: Input to Email textbox
+[INFO ] [2021-09-07 22:49:11,439] User_01_Register - Steps 07: Input to Password textbox
+[INFO ] [2021-09-07 22:49:11,510] User_01_Register - Steps 08: Input to Confirmation textbox
+[INFO ] [2021-09-07 22:49:11,583] User_01_Register - Steps 09: Click to Register button
+[INFO ] [2021-09-07 22:49:14,058] User_01_Register - Steps 10: Verify Success message is displayed
+[INFO ] [2021-09-07 22:49:14,139]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:49:14,139] User_01_Register - Steps 11: Click to Logout link
+[INFO ] [2021-09-07 22:49:16,276] User_01_Register - Steps 12: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 22:49:16,355]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-09-07 22:49:16,361] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-07 22:49:17,408] User_02_Register - Steps 02: Input to Email textbox with value: henry2092@gmail.com
+[INFO ] [2021-09-07 22:49:17,504] User_02_Register - Steps 03: Input to Password textbox with value: 1234aa
+[INFO ] [2021-09-07 22:49:17,562] User_02_Register - Steps 05: Click to Login button
+[INFO ] [2021-09-07 22:49:20,596] User_02_Register - Steps 05: Verify Home Page Slider is displayed
+[INFO ] [2021-09-07 22:49:20,695]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-07 22:49:20,699] Post-Condition: Close browser

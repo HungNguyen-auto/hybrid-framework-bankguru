@@ -9,7 +9,10 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.BeforeTest;
 
+import java.io.File;
+import java.util.Iterator;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -131,4 +134,27 @@ public class BaseTest {
     protected boolean verifyEquals(Object actual, Object expected) {
         return checkEquals(actual, expected);
     }
+
+	public WebDriver getDriver() {
+		return this.driver;
+	}
+	
+	@BeforeTest
+	public void deleteAllFilesInScreenshotReportNG() {
+		log.info("-------------------------- START delete file in folder --------------------------");
+		try {
+			String workingDir = System.getProperty("user.dir");
+			String pathFolderDownload = workingDir + "\\screenshotReportNG";
+			File file = new File(pathFolderDownload);
+			File[] listOfFiles = file.listFiles();
+			for (int i = 0; i < listOfFiles.length; i++) {
+				if(listOfFiles[i].isFile()) {
+					new File(listOfFiles[i].toString()).delete();
+				}
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
 }

@@ -2,6 +2,7 @@ package com.facebook;
 
 import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -18,6 +19,7 @@ public class Level_12_Register_Assert_Verify extends BaseTest {
     public void beforeClass(String browserName, String appUrl) {
         driver = getBrowserDriver(browserName, appUrl);
         registerPage = PageGeneratorManager.getRegisterPage(driver);
+        Assert.assertTrue(false);
     }
 
     @Test
@@ -42,8 +44,8 @@ public class Level_12_Register_Assert_Verify extends BaseTest {
         verifyFalse(registerPage.isLoginButtonUndisplayed());
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void afterClass() {
-        driver.quit();
+        CleanBrowerAndDriver();
     }
 }

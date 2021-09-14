@@ -85,7 +85,7 @@ public class Level_13_Register_Login_Log_Report extends BaseTest {
         verifyTrue(homePage.isHomePageSliderDisplayed());
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void afterClass() {
         log.info("Post-Condition: Close browser");
         driver.quit();

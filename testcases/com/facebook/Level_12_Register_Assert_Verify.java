@@ -46,6 +46,6 @@ public class Level_12_Register_Assert_Verify extends BaseTest {
 
     @AfterClass(alwaysRun = true)
     public void afterClass() {
-        CleanBrowerAndDriver();
+        cleanBrowserAndDriverIntances();
     }
 }

@@ -109,6 +109,6 @@ public class Level_14_Register_Login_Log_Extent_Report extends BaseTest {
 	@AfterClass(alwaysRun = true)
 	public void afterClass(String browserName) {
 		ExtentTestManager.getTest().log(LogStatus.INFO, "Post-Condition: Close browser" + browserName);
-		CleanBrowerAndDriver();
+		cleanBrowserAndDriverIntances();
 	}
 }

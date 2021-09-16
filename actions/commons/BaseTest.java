@@ -157,7 +157,7 @@ public class BaseTest {
 		}
 	}
 	
-	protected void CleanBrowerAndDriver() {
+	protected void cleanBrowserAndDriverIntances() {
 		try {
 			// Get ra tên của OS và convert qua chữ thường
 			String osName = System.getProperty("os.name").toLowerCase();
@@ -165,8 +165,13 @@ public class BaseTest {
 
 			// Khai báo 1 biến command line để thực thi
 			String cmd = "";
-			if (driver != null) {
-				driver.quit();
+			try {
+				if (driver != null) {
+					driver.manage().deleteAllCookies();
+					driver.quit();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 			
 			// Quit driver executable file in Task Manager
@@ -202,4 +207,5 @@ public class BaseTest {
 			log.info(e.getMessage());
 		}
 	}
+	 
 }

@@ -12,8 +12,7 @@
 	<test name="Run on Firefox">
 		<parameter name="browser" value="firefox" />
 		<classes>
-			<class name="com.nopccomerce.login.Level_15_Register_Login_Share_State" />
-			<class name="com.nopcommerce.common.Common_01_Login" />
+			<class name="com.nopccomerce.login.Level_16_Register_Login_Pattern_Object" />
 		</classes>
 	</test>
 	

@@ -5,13 +5,13 @@ import org.openqa.selenium.WebDriver;
 import commons.BasePage;
 import pageUIs.nopCommerce.RegisterPageUI;
 
-public class RegisterPageObject extends BasePage{
+public class RegisterPageObject extends BasePage {
 	private WebDriver driver;
-	
+
 	public RegisterPageObject(WebDriver driver) {
 		this.driver = driver;
 	}
-	
+
 	public void clickToGenderMaleRadioButton() {
 		waitForElementClickable(driver, RegisterPageUI.GENDER_MALE_RADIO);
 		checkToCheckboxOrRadio(driver, RegisterPageUI.GENDER_MALE_RADIO);
@@ -57,5 +57,6 @@ public class RegisterPageObject extends BasePage{
 		checkToCheckboxOrRadio(driver, RegisterPageUI.LOGOUT_LINK);
 		return PageGeneratorManager.getHomePage(driver);
 	}
-	
+
+
 }

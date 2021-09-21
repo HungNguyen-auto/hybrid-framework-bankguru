@@ -12,5 +12,4 @@ public class RegisterPageUI {
 	public static final String SUCCESS_MESSAGE = "//div[@class='result']";
 	public static final String LOGOUT_LINK = "//a[@class='ico-logout']";
 
-	
 }

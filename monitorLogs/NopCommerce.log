@@ -439,3 +439,76 @@
 [INFO ] [2021-09-14 21:25:06,418] OS name = windows 10
 [INFO ] [2021-09-14 21:25:07,426] ---------- QUIT BROWSER SUCCESS ----------
 [INFO ] [2021-09-14 21:26:19,893] -------------------------- START delete file in folder --------------------------
+[INFO ] [2021-09-16 19:40:58,494] -------------------------- START delete file in folder --------------------------
+[INFO ] [2021-09-16 20:37:07,426] -------------------------- START delete file in folder --------------------------
+[INFO ] [2021-09-16 20:37:27,530] Pre-Condition: Open browser 'firefox' and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-16 20:37:43,921] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-16 20:39:15,962] -------------------------- START delete file in folder --------------------------
+[INFO ] [2021-09-16 20:39:30,335] Pre-Condition: Open browser 'firefox' and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-16 20:39:36,380] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-16 20:42:13,192] -------------------------- START delete file in folder --------------------------
+[INFO ] [2021-09-16 20:42:32,507] Pre-Condition: Open browser 'firefox' and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-16 20:42:39,390] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-16 20:42:40,888] User_02_Register - Steps 02: Set Login page cookie
+[INFO ] [2021-09-16 20:42:47,741] User_02_Register - Steps 03: Verify Home Page Slider is displayed
+[INFO ] [2021-09-16 20:47:35,632] -------------------------- START delete file in folder --------------------------
+[INFO ] [2021-09-16 20:47:55,910] Pre-Condition: Open browser 'firefox' and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-16 20:48:02,141] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-16 20:48:03,593] User_02_Register - Steps 02: Set Login page cookie
+[INFO ] [2021-09-16 20:48:10,475] User_02_Register - Steps 03: Click to HomePage image
+[INFO ] [2021-09-16 20:48:12,480] User_02_Register - Steps 04: Verify Home Page Slider is displayed
+[INFO ] [2021-09-16 20:48:12,549]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-16 20:49:46,941] -------------------------- START delete file in folder --------------------------
+[INFO ] [2021-09-16 20:50:05,857] Pre-Condition: Open browser 'firefox' and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-16 20:50:12,835] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-16 20:50:14,223] User_02_Register - Steps 02: Set Login page cookie
+[INFO ] [2021-09-16 20:50:20,339] User_02_Register - Steps 03: Click to HomePage image
+[INFO ] [2021-09-16 20:50:22,046] User_02_Register - Steps 04: Verify Home Page Slider is displayed
+[INFO ] [2021-09-16 20:50:22,210]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-16 20:51:41,466] -------------------------- START delete file in folder --------------------------
+[INFO ] [2021-09-16 20:51:58,281] Pre-Condition: Open browser 'firefox' and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-16 20:52:05,967] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-16 20:52:07,283] User_02_Register - Steps 02: Set Login page cookie
+[INFO ] [2021-09-16 20:52:14,082] User_02_Register - Steps 03: Click to HomePage image
+[INFO ] [2021-09-16 20:52:15,385] User_02_Register - Steps 04: Verify Home Page Slider is displayed
+[INFO ] [2021-09-16 20:52:15,457]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-16 20:52:15,464] Post-Condition: Close browser
+[INFO ] [2021-09-16 20:52:15,464] OS name = windows 10
+[INFO ] [2021-09-16 20:52:16,477] ---------- QUIT BROWSER SUCCESS ----------
+[INFO ] [2021-09-21 18:00:24,008] -------------------------- START delete file in folder --------------------------
+[INFO ] [2021-09-21 18:00:24,029] Pre-Condition: Open browser 'firefox' and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-21 18:00:39,083] User_01_Register - Steps 01: Verify Home Page is displayed
+[INFO ] [2021-09-21 18:00:39,216]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-21 18:00:39,219] User_01_Register - Steps 02: Click to Register Link
+[INFO ] [2021-09-21 18:00:41,926] User_01_Register - Steps 03: Click to Male radio  button
+[INFO ] [2021-09-21 18:00:42,515] User_01_Register - Steps 04: Input to Firstname textbox
+[INFO ] [2021-09-21 18:01:23,615] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-21 18:01:25,922] User_02_Register - Steps 02: Input to Email textbox with value: henry2774@gmail.com
+[INFO ] [2021-09-21 18:01:26,034] Post-Condition: Close browser
+[INFO ] [2021-09-21 18:02:13,893] -------------------------- START delete file in folder --------------------------
+[INFO ] [2021-09-21 18:02:13,901] Pre-Condition: Open browser 'firefox' and navigate to 'https://demo.nopcommerce.com/'
+[INFO ] [2021-09-21 18:02:22,749] User_01_Register - Steps 01: Verify Home Page is displayed
+[INFO ] [2021-09-21 18:02:22,873]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-21 18:02:22,874] User_01_Register - Steps 02: Click to Register Link
+[INFO ] [2021-09-21 18:02:25,644] User_01_Register - Steps 03: Click to Male radio  button
+[INFO ] [2021-09-21 18:02:26,288] User_01_Register - Steps 04: Input to Firstname textbox
+[INFO ] [2021-09-21 18:02:26,379] User_01_Register - Steps 05: Input to Lasttname textbox
+[INFO ] [2021-09-21 18:02:26,452] User_01_Register - Steps 06: Input to Email textbox
+[INFO ] [2021-09-21 18:02:26,543] User_01_Register - Steps 07: Input to Password textbox
+[INFO ] [2021-09-21 18:02:26,631] User_01_Register - Steps 08: Input to Confirmation textbox
+[INFO ] [2021-09-21 18:02:26,706] User_01_Register - Steps 09: Select item in Date dropdown
+[INFO ] [2021-09-21 18:02:26,975] User_01_Register - Steps 10: Select item in Month dropdown
+[INFO ] [2021-09-21 18:02:27,241] User_01_Register - Steps 11: Select item in Year dropdown
+[INFO ] [2021-09-21 18:02:27,539] User_01_Register - Steps 12: Click to Register button
+[INFO ] [2021-09-21 18:02:31,841] User_01_Register - Steps 13: Verify Success message is displayed
+[INFO ] [2021-09-21 18:02:31,946]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-21 18:02:31,947] User_01_Register - Steps 14: Click to Logout link
+[INFO ] [2021-09-21 18:02:36,459] User_01_Register - Steps 15: Verify Home Page Slider is displayed
+[INFO ] [2021-09-21 18:02:36,541]  -------------------------- FAILED -------------------------- 
+[INFO ] [2021-09-21 18:02:36,756] User_02_Register - Steps 01: Click to Login link
+[INFO ] [2021-09-21 18:02:37,488] User_02_Register - Steps 02: Input to Email textbox with value: henry4081@gmail.com
+[INFO ] [2021-09-21 18:02:37,592] User_02_Register - Steps 03: Input to Password textbox with value: 1234aa
+[INFO ] [2021-09-21 18:02:37,670] User_02_Register - Steps 05: Click to Login button
+[INFO ] [2021-09-21 18:02:42,206] User_02_Register - Steps 05: Verify Home Page Slider is displayed
+[INFO ] [2021-09-21 18:02:42,319]  -------------------------- PASSED -------------------------- 
+[INFO ] [2021-09-21 18:02:42,321] Post-Condition: Close browser

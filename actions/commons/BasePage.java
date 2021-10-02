@@ -312,6 +312,11 @@ public class BasePage {
 		action.moveToElement(getElement(driver, locator)).perform();
 	}
 
+	public void hoverToElement(WebDriver driver, String locator, String...params) {
+		action = new Actions(driver);
+		action.moveToElement(getElement(driver, getDynamicLocator(locator, params))).perform();
+	}
+	
 	public void doubleClickToElement(WebDriver driver, String locator) {
 		action = new Actions(driver);
 		action.doubleClick(getElement(driver, locator)).perform();
@@ -542,28 +547,82 @@ public class BasePage {
 		getElement(driver, AdminBasePageUI.UPLOAD_FILE_BY_CARD_NAME, cardName).sendKeys(fullFileName);
 	}
 	
-	// Pattern Object
+	// Pattern Object - Nopcommerce
 	public void inputToTextboxByID(WebDriver driver, String textboxID, String value) {
 		waitForElementVisible(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, textboxID);
-		sendkeyToElement(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID , value, textboxID);
+		sendkeyToElement(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID, value, textboxID);
 	}
-	
+
 	public void openHeaderPageByName(WebDriver driver, String pageName) {
 		waitForElementClickable(driver, BasePageUI.DYNAMIC_HEADER_PAGE, pageName);
 		clickToElement(driver, BasePageUI.DYNAMIC_HEADER_PAGE, pageName);
 	}
-	
+
 	public void clickToRadioByID(WebDriver driver, String radioID) {
 		waitForElementClickable(driver, BasePageUI.DYNAMIC_RADIO_BY_ID, radioID);
 		clickToElement(driver, BasePageUI.DYNAMIC_RADIO_BY_ID, radioID);
 	}
-	
+
 	public void selectDropdownByName(WebDriver driver, String dropdownName, String itemText) {
 		selectDropdownByText(driver, BasePageUI.DYNAMIC_DROPDOWN_BY_NAME, itemText, dropdownName);
 	}
-	
+
 	public void clickToButtonByText(WebDriver driver, String buttonText) {
 		waitForElementClickable(driver, BasePageUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);
 		clickToElement(driver, BasePageUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);
 	}
+	
+	// HRM - Menu - SubMenu - ChildSubMenu
+	public void openMenuByName(WebDriver driver, String menuName) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_MENU_PAGE, menuName);
+		clickToElement(driver, BasePageUI.DYNAMIC_MENU_PAGE, menuName);
+	}
+	
+	public void openSubMenuByNamee(WebDriver driver, String menuName, String subMenuName) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_MENU_PAGE, menuName);
+		clickToElement(driver, BasePageUI.DYNAMIC_MENU_PAGE, menuName);
+		
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_MENU_PAGE, subMenuName);
+		clickToElement(driver, BasePageUI.DYNAMIC_MENU_PAGE, subMenuName);
+	}
+	
+	public void openChildSubMenuByName(WebDriver driver, String menuName, String subMenuName, String childSubMenu) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_MENU_PAGE, menuName);
+		clickToElement(driver, BasePageUI.DYNAMIC_MENU_PAGE, menuName);
+		
+		waitForElementVisible(driver, BasePageUI.DYNAMIC_MENU_PAGE, subMenuName);
+		hoverToElement(driver, BasePageUI.DYNAMIC_MENU_PAGE, subMenuName);
+		
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_MENU_PAGE, childSubMenu);
+		clickToElement(driver, BasePageUI.DYNAMIC_MENU_PAGE, childSubMenu);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

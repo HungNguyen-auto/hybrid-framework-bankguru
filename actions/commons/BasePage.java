@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.adminNopCommerce.ProductPageObject;
+import pageObjects.hrm.LoginPO;
 import pageObjects.nopCommerce.MyAccountPageObject;
 import pageObjects.nopCommerce.OrdersPageObject;
 import pageObjects.nopCommerce.PageGeneratorManager;
@@ -481,6 +482,9 @@ public class BasePage {
 				.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(getDynamicLocator(locator, params))));
 	}
 
+	public void uploadFile(WebDriver driver, String locator, String filePath) {
+		getElement(driver, locator).sendKeys(filePath);
+	}
 	public void sleepInSecond(long timeoutInSecond) {
 		try {
 			Thread.sleep(timeoutInSecond * 1000);
@@ -597,7 +601,13 @@ public class BasePage {
 		clickToElement(driver, BasePageUI.DYNAMIC_MENU_PAGE, childSubMenu);
 	}
 	
-	
+	public void logoutSystem(WebDriver driver, String menuName) {
+		waitForElementClickable(driver, BasePageUI.WELCOME_USERNAME);
+		clickToElement(driver, BasePageUI.WELCOME_USERNAME);
+		
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_WELCOME_MENU, menuName);
+		clickToElement(driver, BasePageUI.DYNAMIC_WELCOME_MENU, menuName);
+	}
 	
 	
 	

@@ -254,6 +254,13 @@ public class BasePage {
 		}
 	}
 
+	public void checkToCheckboxOrRadio(WebDriver driver, String locator, String...params) {
+		locator = getDynamicLocator(locator, params);
+		if (!getElement(driver, locator).isSelected()) {
+			getElement(driver, locator).click();
+		}
+	}
+	
 	public void uncheckToCheckbox(WebDriver driver, String locator) {
 		if (getElement(driver, locator).isSelected()) {
 			getElement(driver, locator).click();
@@ -609,7 +616,10 @@ public class BasePage {
 		clickToElement(driver, BasePageUI.DYNAMIC_WELCOME_MENU, menuName);
 	}
 	
-	
+	public void openLeftMenuByName(WebDriver driver, String menuName) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_LEFT_MENU_PAGE, menuName);
+		clickToElement(driver, BasePageUI.DYNAMIC_LEFT_MENU_PAGE, menuName);
+	}
 	
 	
 	

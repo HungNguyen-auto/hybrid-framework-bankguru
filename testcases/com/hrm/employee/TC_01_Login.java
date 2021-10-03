@@ -1,5 +1,7 @@
 package com.hrm.employee;
 
+import java.util.Random;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -22,8 +24,8 @@ public class TC_01_Login extends BaseTest {
 	EmployeeListPO employeeListPage;
 	AddEmployeePO addEmployeePage;
 	PersonalDetailPO personalDetailPage;
-	String emailAddress, password, statusValue, employeeID, username, firstname, lastname, filePath;
-
+	String attachmentName,attachmentPath, bloodType, maritialStatus,emailAddress, password, statusValue, employeeID, username, firstname, lastname, filePath, gender, country;
+	Random rand = new Random();
 	@Parameters({ "browser", "url" })
 	@BeforeClass
 	public void beforeClass(String browserName, String appUrl) {
@@ -32,9 +34,12 @@ public class TC_01_Login extends BaseTest {
 		emailAddress = generateRandomEmail();
 		password = "1234aaAA";
 		statusValue = "Enabled";
-		firstname = "henry";
+		firstname = "henry" + rand.nextInt(99);
 		lastname = "nguyen";
+		gender = "Male";
+		country = "Vietnamese"; maritialStatus = "Single"; bloodType = "AB+"; attachmentName = "F Employment Application.docx";
 		filePath = GlobalConstants.UPLOAD_FOLDER_PATH + "dog.jpg";
+		attachmentPath = GlobalConstants.UPLOAD_FOLDER_PATH + attachmentName;
 		loginPage = PageGeneratorManager.getLoginPage(driver);
 
 		log.info("Pre-Condition - Step 02: Login with Admin role");
@@ -118,7 +123,44 @@ public class TC_01_Login extends BaseTest {
 
 	@Test
 	public void Employee_03_Personal_Details() {
+		log.info("Personal_Details_03 - Step 01: Open Personal Details Page");
+		personalDetailPage.openLeftMenuByName(driver, "Personal Details");
+		
+		log.info("Personal_Details_03 - Step 02: Click on Edit Personal Details");
+		personalDetailPage.clickOnButtonByID("btnSave");
+		
+		log.info("Personal_Details_03 - Step 03: Select Gender Male");
+		personalDetailPage.selectGenderRadioByText(gender);
+		
+		log.info("Personal_Details_03 - Step 04: Select Nationality");
+		personalDetailPage.selectDropdownByText("personal_cmbNation",country);
+		
+		log.info("Personal_Details_03 - Step 05: Select Marital Status");
+		personalDetailPage.selectDropdownByText("personal_cmbMarital",maritialStatus);
 
+		log.info("Personal_Details_03 - Step 06: Click on Save button");
+		personalDetailPage.clickOnButtonByID("btnSave");
+		
+		log.info("Personal_Details_03 - Step 07: Click on Edit Customer Fields");
+		personalDetailPage.clickOnButtonByID("btnEditCustom");
+		
+		log.info("Personal_Details_03 - Step 08: Select blood type");
+		personalDetailPage.selectBloodTypeByText(bloodType);
+		
+		log.info("Personal_Details_03 - Step 09: Click on Save Customer Fields");
+		personalDetailPage.clickOnButtonByID("btnEditCustom");
+		
+		log.info("Personal_Details_03 - Step 10: Click on Add Attachments");
+		personalDetailPage.clickOnButtonByID("btnAddAttachment");
+		
+		log.info("Personal_Details_03 - Step 11: Upload attachment");
+		personalDetailPage.uploadAttachments(attachmentPath);
+		
+		log.info("Personal_Details_03 - Step 12: Click on Upload button Attachments");
+		personalDetailPage.clickOnButtonByID("btnSaveAttachment");
+		
+		log.info("Personal_Details_03 - Step 13: Verify is attachment uploaded successfully");
+		verifyTrue(personalDetailPage.isAttachmentUploaded(attachmentName));
 	}
 
 	@Test

@@ -21,6 +21,7 @@ import pageObjects.nopCommerce.OrdersPageObject;
 import pageObjects.nopCommerce.PageGeneratorManager;
 import pageObjects.nopCommerce.SearchPageObject;
 import pageUIs.adminNopCommerce.AdminBasePageUI;
+import pageUIs.hrm.PersonalDetailPageUI;
 import pageUIs.nopCommerce.*;
 
 public class BasePage {
@@ -621,7 +622,11 @@ public class BasePage {
 		clickToElement(driver, BasePageUI.DYNAMIC_LEFT_MENU_PAGE, menuName);
 	}
 	
-	
+	public void clickOnButtonByID(WebDriver driver, String buttonID) {
+		waitForElementClickable(driver, BasePageUI.DYNAMIC_BUTTON, buttonID);
+		clickToElement(driver, BasePageUI.DYNAMIC_BUTTON, buttonID);
+	}
+
 	
 	
 	

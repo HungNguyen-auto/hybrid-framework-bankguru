@@ -18,5 +18,5 @@ public class BasePageUI{
 	public static final String WELCOME_USERNAME = "//a[@id='welcome']";
 	public static final String DYNAMIC_WELCOME_MENU = "//div[@id='welcome-menu']//a[text()='%s']";
 	public static final String DYNAMIC_LEFT_MENU_PAGE = "//ul[@id='sidenav']/li/a[text()='%s']";
-	
+	public static final String DYNAMIC_BUTTON = "//input[@id='%s']";
 }

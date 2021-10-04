@@ -25,11 +25,6 @@ public class PersonalDetailPO extends BasePage {
 		clickToElement(driver, PersonalDetailPageUI.UPLOAD_BUTTON);
 	}
 
-	public void clickOnButtonByID(String buttonID) {
-		waitForElementClickable(driver, PersonalDetailPageUI.DYNAMIC_BUTTON, buttonID);
-		clickToElement(driver, PersonalDetailPageUI.DYNAMIC_BUTTON, buttonID);
-	}
-
 	public void selectGenderRadioByText(String gender) {
 		waitForElementClickable(driver, PersonalDetailPageUI.DYNAMIC_GENDER_RADIO, gender);
 		checkToCheckboxOrRadio(driver, PersonalDetailPageUI.DYNAMIC_GENDER_RADIO, gender);
@@ -52,6 +47,11 @@ public class PersonalDetailPO extends BasePage {
 	public boolean isAttachmentUploaded(String attachmentName) {
 		waitForElementVisible(driver,PersonalDetailPageUI.ATTACHMENT_INFO ,attachmentName);
 		return isElementDisplayed(driver,PersonalDetailPageUI.ATTACHMENT_INFO ,attachmentName);
+	}
+
+	public boolean isEmergencyContactAdded(String firstname, String relationship, String homePhone) {
+		waitForElementVisible(driver, PersonalDetailPageUI.EMERGENCY_CONTACT_INFO, firstname, relationship, homePhone);
+		return isElementDisplayed(driver, PersonalDetailPageUI.EMERGENCY_CONTACT_INFO, firstname, relationship, homePhone);
 	}
 
 //	public boolean isAvatarUploadedSucess() {

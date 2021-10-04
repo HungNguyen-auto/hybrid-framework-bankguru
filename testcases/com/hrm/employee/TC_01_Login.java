@@ -24,7 +24,7 @@ public class TC_01_Login extends BaseTest {
 	EmployeeListPO employeeListPage;
 	AddEmployeePO addEmployeePage;
 	PersonalDetailPO personalDetailPage;
-	String attachmentName,attachmentPath, bloodType, maritialStatus,emailAddress, password, statusValue, employeeID, username, firstname, lastname, filePath, gender, country;
+	String relationship, homePhone, attachmentName,attachmentPath, bloodType, maritialStatus,emailAddress, password, statusValue, employeeID, username, firstname, lastname, filePath, gender, country;
 	Random rand = new Random();
 	@Parameters({ "browser", "url" })
 	@BeforeClass
@@ -36,7 +36,7 @@ public class TC_01_Login extends BaseTest {
 		statusValue = "Enabled";
 		firstname = "henry" + rand.nextInt(99);
 		lastname = "nguyen";
-		gender = "Male";
+		gender = "Male"; homePhone = "0357626252"; relationship = "Who am I";
 		country = "Vietnamese"; maritialStatus = "Single"; bloodType = "AB+"; attachmentName = "F Employment Application.docx";
 		filePath = GlobalConstants.UPLOAD_FOLDER_PATH + "dog.jpg";
 		attachmentPath = GlobalConstants.UPLOAD_FOLDER_PATH + attachmentName;
@@ -127,7 +127,7 @@ public class TC_01_Login extends BaseTest {
 		personalDetailPage.openLeftMenuByName(driver, "Personal Details");
 		
 		log.info("Personal_Details_03 - Step 02: Click on Edit Personal Details");
-		personalDetailPage.clickOnButtonByID("btnSave");
+		personalDetailPage.clickOnButtonByID(driver,"btnSave");
 		
 		log.info("Personal_Details_03 - Step 03: Select Gender Male");
 		personalDetailPage.selectGenderRadioByText(gender);
@@ -139,25 +139,25 @@ public class TC_01_Login extends BaseTest {
 		personalDetailPage.selectDropdownByText("personal_cmbMarital",maritialStatus);
 
 		log.info("Personal_Details_03 - Step 06: Click on Save button");
-		personalDetailPage.clickOnButtonByID("btnSave");
+		personalDetailPage.clickOnButtonByID(driver, "btnSave");
 		
 		log.info("Personal_Details_03 - Step 07: Click on Edit Customer Fields");
-		personalDetailPage.clickOnButtonByID("btnEditCustom");
+		personalDetailPage.clickOnButtonByID(driver,"btnEditCustom");
 		
 		log.info("Personal_Details_03 - Step 08: Select blood type");
 		personalDetailPage.selectBloodTypeByText(bloodType);
 		
 		log.info("Personal_Details_03 - Step 09: Click on Save Customer Fields");
-		personalDetailPage.clickOnButtonByID("btnEditCustom");
+		personalDetailPage.clickOnButtonByID(driver, "btnEditCustom");
 		
 		log.info("Personal_Details_03 - Step 10: Click on Add Attachments");
-		personalDetailPage.clickOnButtonByID("btnAddAttachment");
+		personalDetailPage.clickOnButtonByID(driver, "btnAddAttachment");
 		
 		log.info("Personal_Details_03 - Step 11: Upload attachment");
 		personalDetailPage.uploadAttachments(attachmentPath);
 		
 		log.info("Personal_Details_03 - Step 12: Click on Upload button Attachments");
-		personalDetailPage.clickOnButtonByID("btnSaveAttachment");
+		personalDetailPage.clickOnButtonByID(driver, "btnSaveAttachment");
 		
 		log.info("Personal_Details_03 - Step 13: Verify is attachment uploaded successfully");
 		verifyTrue(personalDetailPage.isAttachmentUploaded(attachmentName));
@@ -165,12 +165,71 @@ public class TC_01_Login extends BaseTest {
 
 	@Test
 	public void Employee_04_Contact_Details() {
-
+		log.info("Contact_Details_04 - Step 01: Open Contact Details Page");
+		personalDetailPage.openLeftMenuByName(driver, "Contact Details");
+		
+		log.info("Contact_Details_04 - Step 02: Click on Edit Contact Details");
+		personalDetailPage.clickOnButtonByID(driver, "btnSave");
+		
+		log.info("Contact_Details_04 - Step 03: Input to City textbox");
+		personalDetailPage.inputToTextboxByID(driver, "contact_city", country);
+		
+		log.info("Contact_Details_04 - Step 04: Input to Work Email");
+		personalDetailPage.inputToTextboxByID(driver, "contact_emp_work_email", emailAddress);
+		
+		log.info("Contact_Details_04 - Step 05: Select Country dropdownlist");
+		personalDetailPage.selectDropdownByText("contact_country", "Viet Nam");
+		
+		log.info("Contact_Details_04 - Step 06: Click on Save Contact Details");
+		personalDetailPage.clickOnButtonByID(driver, "btnSave");
+		
+		log.info("Contact_Details_04 - Step 07: Click on Add Attachments");
+		personalDetailPage.clickOnButtonByID(driver, "btnAddAttachment");
+		
+		log.info("Contact_Details_04 - Step 08: Upload attachment");
+		personalDetailPage.uploadAttachments(attachmentPath);
+		
+		log.info("Contact_Details_04 - Step 09: Click on Upload button Attachments");
+		personalDetailPage.clickOnButtonByID(driver, "btnSaveAttachment");
+		
+		log.info("Contact_Details_04 - Step 10: Verify is attachment uploaded successfully");
+		verifyTrue(personalDetailPage.isAttachmentUploaded(attachmentName));
 	}
 
 	@Test
 	public void Employee_05_Emergency_Details() {
-
+		log.info("Emergency_Details_05 - Step 01: Open Emergency Details Page");
+		personalDetailPage.openLeftMenuByName(driver, "Emergency Contacts");
+		
+		log.info("Emergency_Details_05 - Step 02: Click on Add Assigned Emergency Contacts");
+		personalDetailPage.clickOnButtonByID(driver, "btnAddContact");
+		
+		log.info("Emergency_Details_05 - Step 03: Input to Name textbox");
+		personalDetailPage.inputToTextboxByID(driver, "emgcontacts_name", firstname);
+		
+		log.info("Emergency_Details_05 - Step 04: Input to Relationship textbox");
+		personalDetailPage.inputToTextboxByID(driver, "emgcontacts_relationship", relationship);
+		
+		log.info("Emergency_Details_05 - Step 05: Input to Relationship textbox");
+		personalDetailPage.inputToTextboxByID(driver, "emgcontacts_homePhone", homePhone);
+		
+		log.info("Emergency_Details_05 - Step 06: Click on Save Assigned Emergency Contacts");
+		personalDetailPage.clickOnButtonByID(driver, "btnSaveEContact");
+		
+		log.info("Emergency_Details_05 - Step 07: Verify that Emergency Contacts added successully");
+		verifyTrue(personalDetailPage.isEmergencyContactAdded(firstname, relationship, homePhone));
+	
+		log.info("Emergency_Details_05 - Step 08: Click on Add Attachments");
+		personalDetailPage.clickOnButtonByID(driver, "btnAddAttachment");
+		
+		log.info("Emergency_Details_05 - Step 09: Upload attachment");
+		personalDetailPage.uploadAttachments(attachmentPath);
+		
+		log.info("Emergency_Details_05 - Step 10: Click on Upload button Attachments");
+		personalDetailPage.clickOnButtonByID(driver, "btnSaveAttachment");
+		
+		log.info("Emergency_Details_05 - Step 11: Verify is attachment uploaded successfully");
+		verifyTrue(personalDetailPage.isAttachmentUploaded(attachmentName));
 	}
 
 	@Test

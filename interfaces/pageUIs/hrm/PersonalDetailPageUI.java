@@ -9,4 +9,6 @@ public class PersonalDetailPageUI {
 	public static final String BLOOD_TYPE_DROPDOWN = "//label[text()='Blood Type']//following-sibling::select";
 	public static final String ATTACHMENT_INFO = "//a[contains(text(), '%s')]";
 	public static final String EMERGENCY_CONTACT_INFO = "//table[@id='emgcontact_list']//a[text()='%s']/parent::td//following-sibling::td[text()='%s']//following-sibling::td[text()='%s']";
+	public static final String DEPENDENT_INFO = "//table[@id='dependent_list']//a[text()='%s']/parent::td//following-sibling::td[contains(text(),'%s')]//following-sibling::td[text()='%s']";
+
 }

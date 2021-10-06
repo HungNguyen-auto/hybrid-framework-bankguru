@@ -54,6 +54,11 @@ public class PersonalDetailPO extends BasePage {
 		return isElementDisplayed(driver, PersonalDetailPageUI.EMERGENCY_CONTACT_INFO, firstname, relationship, homePhone);
 	}
 
+	public boolean isDependentAdded(String name, String relationship, String dob) {
+		waitForElementVisible(driver, PersonalDetailPageUI.DEPENDENT_INFO, name, relationship,dob);
+		return isElementDisplayed(driver, PersonalDetailPageUI.DEPENDENT_INFO, name, relationship,dob);
+	}
+
 //	public boolean isAvatarUploadedSucess() {
 //		waitForAllElementsVisible(driver, PersonalDetailPageUI.AVATAR_IMAGE);
 //		width = getAttributeValue(driver, PersonalDetailPageUI.AVATAR_IMAGE, "width");

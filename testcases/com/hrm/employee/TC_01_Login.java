@@ -234,7 +234,29 @@ public class TC_01_Login extends BaseTest {
 
 	@Test
 	public void Employee_06_Assigned_Dependents() {
+		log.info("Emergency_Details_06 - Step 01: Open Dependents Page");
+		personalDetailPage.openLeftMenuByName(driver, "Dependents");
+		
+		log.info("Emergency_Details_06 - Step 02: Click on Add button");
+		personalDetailPage.clickOnButtonByID(driver, "btnAddDependent");
+		
+		log.info("Emergency_Details_06 - Step 03: Input to Name textbox");
+		personalDetailPage.inputToTextboxByID(driver, "dependent_name", "Henry");
+		
+		log.info("Emergency_Details_06 - Step 04: Select relationship dropdownlist");
+		personalDetailPage.selectDropdownByText("dependent_relationshipType", "Other");
+		
+		log.info("Emergency_Details_06 - Step 05: Input specific relationship");
+		personalDetailPage.inputToTextboxByID(driver, "dependent_relationship", "Wife");
+		
+		log.info("Emergency_Details_06 - Step 06: Input date of birth");
+		personalDetailPage.inputToTextboxByID(driver, "dependent_dateOfBirth", "1998-10-07");
 
+		log.info("Emergency_Details_06 - Step 07: Click on Save button");
+		personalDetailPage.clickOnButtonByID(driver, "btnSaveDependent");
+		
+		log.info("Emergency_Details_06 - Step 08: Verify dependent added successfully");
+		verifyTrue(personalDetailPage.isDependentAdded("Henry", "Wife", "1998-10-07"));
 	}
 
 	@Test

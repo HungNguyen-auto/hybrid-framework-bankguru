@@ -32,4 +32,10 @@ public class EmployeeListPO extends BasePage{
 		waitForElementClickable(driver, EmployeeListPageUI.SEARCH_BUTTON);
 		clickToElement(driver, EmployeeListPageUI.SEARCH_BUTTON);
 	}
+
+	public PersonalDetailPO openPersonalDetails(String employeeID, String firstname, String lastname) {
+		waitForElementClickable(driver, EmployeeListPageUI.EMPLOYEE_INFO_SEARCH, employeeID, firstname, lastname);
+		clickToElement(driver, EmployeeListPageUI.EMPLOYEE_INFO_SEARCH, employeeID, firstname, lastname);	
+		return PageGeneratorManager.getPersonalDetailPage(driver);
+	}
 }

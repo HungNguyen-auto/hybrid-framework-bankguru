@@ -115,7 +115,7 @@ public class TC_01_Login extends BaseTest {
 		personalDetailPage.ClickOnAvatar();
 		
 		log.info("Upload_Avatar_02 - Step 03: Upload a new image");
-		personalDetailPage.UploadNewImage(filePath);
+		personalDetailPage.uploadAttachments(filePath, "photofile");
 		
 //		log.info("Upload_Avatar_02 - Step 04: Verify new image uploaded successfully");
 //		verifyTrue(personalDetailPage.isAvatarUploadedSucess());
@@ -154,7 +154,7 @@ public class TC_01_Login extends BaseTest {
 		personalDetailPage.clickOnButtonByID(driver, "btnAddAttachment");
 		
 		log.info("Personal_Details_03 - Step 11: Upload attachment");
-		personalDetailPage.uploadAttachments(attachmentPath);
+		personalDetailPage.uploadAttachments(attachmentPath, "ufile");
 		
 		log.info("Personal_Details_03 - Step 12: Click on Upload button Attachments");
 		personalDetailPage.clickOnButtonByID(driver, "btnSaveAttachment");
@@ -187,7 +187,7 @@ public class TC_01_Login extends BaseTest {
 		personalDetailPage.clickOnButtonByID(driver, "btnAddAttachment");
 		
 		log.info("Contact_Details_04 - Step 08: Upload attachment");
-		personalDetailPage.uploadAttachments(attachmentPath);
+		personalDetailPage.uploadAttachments(attachmentPath, "ufile");
 		
 		log.info("Contact_Details_04 - Step 09: Click on Upload button Attachments");
 		personalDetailPage.clickOnButtonByID(driver, "btnSaveAttachment");
@@ -223,7 +223,7 @@ public class TC_01_Login extends BaseTest {
 		personalDetailPage.clickOnButtonByID(driver, "btnAddAttachment");
 		
 		log.info("Emergency_Details_05 - Step 09: Upload attachment");
-		personalDetailPage.uploadAttachments(attachmentPath);
+		personalDetailPage.uploadAttachments(attachmentPath, "ufile");
 		
 		log.info("Emergency_Details_05 - Step 10: Click on Upload button Attachments");
 		personalDetailPage.clickOnButtonByID(driver, "btnSaveAttachment");
@@ -257,11 +257,67 @@ public class TC_01_Login extends BaseTest {
 		
 		log.info("Emergency_Details_06 - Step 08: Verify dependent added successfully");
 		verifyTrue(personalDetailPage.isDependentAdded("Henry", "Wife", "1998-10-07"));
+		
+		log.info("Emergency_Details_06 - Step 09: Logout from Employee role");
+		personalDetailPage.logoutSystem(driver, "Logout");
+		loginPage = PageGeneratorManager.getLoginPage(driver);
+		
 	}
 
 	@Test
-	public void Employee_07_Edit_View_Job() {
+	public void Employee_07_Admin_Edit_Job() {
+		
+		log.info("Admin_Edit_Job_07 - Step 01: Login as Admin role");
+		dashboardPage = loginPage.loginToSystem("Admin", "admin123");
+		
+		log.info("Admin_Edit_Job_07 - Step 02: Open 'Employee List'");
+		dashboardPage.openSubMenuByNamee(driver, "PIM", "Employee List");
+		employeeListPage = PageGeneratorManager.getEmployeeListPage(driver);
+		
+		log.info("Admin_Edit_Job_07 - Step 03: Input to Employee Name textbox");
+		employeeListPage.inputToEmployeeNameTextbox(firstname + " " + lastname);
 
+		log.info("Admin_Edit_Job_07 - Step 04: Click on 'Search' button");
+		employeeListPage.clickOnSearchButton();
+
+		log.info("Admin_Edit_Job_07 - Step 05: Click on Lastname to open Personal Details");
+		personalDetailPage = employeeListPage.openPersonalDetails(employeeID, firstname, lastname);
+		
+		log.info("Admin_Edit_Job_07 - Step 06: Open 'Job' page");
+		personalDetailPage.openLeftMenuByName(driver, "Job");
+		
+		log.info("Admin_Edit_Job_07 - Step 07: Click on Edit button");
+		personalDetailPage.clickOnButtonByID(driver, "btnSave");
+		
+		log.info("Admin_Edit_Job_07 - Step 08: Select Job Title dropdownlist");
+		personalDetailPage.selectDropdownByText("job_job_title", "QA Engineer");
+		
+		log.info("Admin_Edit_Job_07 - Step 09: Select Employee status dropdownlist");
+		personalDetailPage.selectDropdownByText("job_emp_status", "Full-Time Contract");
+		
+		log.info("Admin_Edit_Job_07 - Step 10: Input to Joined Date");
+		personalDetailPage.inputToTextboxByID(driver, "job_joined_date", "2020-05-04");
+		
+		log.info("Admin_Edit_Job_07 - Step 11: Attach Employee contract");
+		personalDetailPage.uploadAttachments(attachmentPath, "job_contract_file");
+		
+		log.info("Admin_Edit_Job_07 - Step 12: Click on Save button");
+		personalDetailPage.clickOnButtonByID(driver, "btnSave");
+		
+		log.info("Admin_Edit_Job_07 - Step 13: Verify that Contract is attached successlly");
+		verifyTrue(personalDetailPage.isContractDetailsAttached(attachmentName));
+		
+		log.info("Admin_Edit_Job_07 - Step 14: Click on Add button Attachments");
+		personalDetailPage.clickOnButtonByID(driver, "btnAddAttachment");
+		
+		log.info("Admin_Edit_Job_07 - Step 15: Add attachment");
+		personalDetailPage.uploadAttachments(attachmentPath, "ufile");
+		
+		log.info("Admin_Edit_Job_07 - Step 16: Click on Upload button");
+		personalDetailPage.clickOnButtonByID(driver, "btnSaveAttachment");
+		
+		log.info("Admin_Edit_Job_07 - Step 17: Verify that Attachment is attached successlly");
+		verifyTrue(personalDetailPage.isAttachmentUploaded(attachmentName));
 	}
 
 	@Test

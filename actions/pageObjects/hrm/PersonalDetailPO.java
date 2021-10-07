@@ -18,7 +18,7 @@ public class PersonalDetailPO extends BasePage {
 		clickToElement(driver, PersonalDetailPageUI.AVATAR_IMAGE);
 	}
 
-	public void UploadNewImage(String filePath) {
+	public void UploadNewImage(String filePath, String controlID) {
 		uploadFile(driver, PersonalDetailPageUI.UPLOAD_FILE, filePath);
 
 		waitForElementClickable(driver, PersonalDetailPageUI.UPLOAD_BUTTON);
@@ -40,8 +40,8 @@ public class PersonalDetailPO extends BasePage {
 		selectDropdownByText(driver, PersonalDetailPageUI.BLOOD_TYPE_DROPDOWN, bloodType);
 	}
 
-	public void uploadAttachments(String attachmentPath) {
-		uploadFile(driver, PersonalDetailPageUI.UPLOAD_FILE, attachmentPath);
+	public void uploadAttachments(String attachmentPath, String controlID) {
+		uploadFile(driver, PersonalDetailPageUI.UPLOAD_FILE, attachmentPath, controlID);
 	}
 
 	public boolean isAttachmentUploaded(String attachmentName) {
@@ -57,6 +57,11 @@ public class PersonalDetailPO extends BasePage {
 	public boolean isDependentAdded(String name, String relationship, String dob) {
 		waitForElementVisible(driver, PersonalDetailPageUI.DEPENDENT_INFO, name, relationship,dob);
 		return isElementDisplayed(driver, PersonalDetailPageUI.DEPENDENT_INFO, name, relationship,dob);
+	}
+
+	public boolean isContractDetailsAttached(String attachmentName) {
+		waitForElementVisible(driver, PersonalDetailPageUI.CONTRACT_DETAILS, attachmentName);
+		return isElementDisplayed(driver, PersonalDetailPageUI.CONTRACT_DETAILS, attachmentName);
 	}
 
 //	public boolean isAvatarUploadedSucess() {

@@ -493,6 +493,12 @@ public class BasePage {
 	public void uploadFile(WebDriver driver, String locator, String filePath) {
 		getElement(driver, locator).sendKeys(filePath);
 	}
+	
+	public void uploadFile(WebDriver driver, String locator, String filePath, String...params) {
+		locator = getDynamicLocator(locator, params);
+		getElement(driver, locator).sendKeys(filePath);
+	}
+	
 	public void sleepInSecond(long timeoutInSecond) {
 		try {
 			Thread.sleep(timeoutInSecond * 1000);

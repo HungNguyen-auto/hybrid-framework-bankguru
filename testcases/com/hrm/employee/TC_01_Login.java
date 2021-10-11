@@ -115,7 +115,7 @@ public class TC_01_Login extends BaseTest {
 		personalDetailPage.ClickOnAvatar();
 		
 		log.info("Upload_Avatar_02 - Step 03: Upload a new image");
-		personalDetailPage.uploadAttachments(filePath, "photofile");
+		personalDetailPage.UploadNewImage(filePath, "photofile");
 		
 //		log.info("Upload_Avatar_02 - Step 04: Verify new image uploaded successfully");
 //		verifyTrue(personalDetailPage.isAvatarUploadedSucess());
@@ -160,7 +160,7 @@ public class TC_01_Login extends BaseTest {
 		personalDetailPage.clickOnButtonByID(driver, "btnSaveAttachment");
 		
 		log.info("Personal_Details_03 - Step 13: Verify is attachment uploaded successfully");
-		verifyTrue(personalDetailPage.isAttachmentUploaded(attachmentName));
+		verifyTrue(personalDetailPage.isAttachmentUploaded("tblAttachments", attachmentName));
 	}
 
 	@Test
@@ -193,7 +193,7 @@ public class TC_01_Login extends BaseTest {
 		personalDetailPage.clickOnButtonByID(driver, "btnSaveAttachment");
 		
 		log.info("Contact_Details_04 - Step 10: Verify is attachment uploaded successfully");
-		verifyTrue(personalDetailPage.isAttachmentUploaded(attachmentName));
+		verifyTrue(personalDetailPage.isAttachmentUploaded("tblAttachments", attachmentName));
 	}
 
 	@Test
@@ -229,7 +229,7 @@ public class TC_01_Login extends BaseTest {
 		personalDetailPage.clickOnButtonByID(driver, "btnSaveAttachment");
 		
 		log.info("Emergency_Details_05 - Step 11: Verify is attachment uploaded successfully");
-		verifyTrue(personalDetailPage.isAttachmentUploaded(attachmentName));
+		verifyTrue(personalDetailPage.isAttachmentUploaded("tblAttachments", attachmentName));
 	}
 
 	@Test
@@ -317,12 +317,58 @@ public class TC_01_Login extends BaseTest {
 		personalDetailPage.clickOnButtonByID(driver, "btnSaveAttachment");
 		
 		log.info("Admin_Edit_Job_07 - Step 17: Verify that Attachment is attached successlly");
-		verifyTrue(personalDetailPage.isAttachmentUploaded(attachmentName));
+		verifyTrue(personalDetailPage.isAttachmentUploaded("tblAttachments", attachmentName));
+		
 	}
 
 	@Test
-	public void Employee_08_Edit_View_Salary() {
+	public void Employee_08_Admin_Edit_Salary() {
 
+		log.info("Admin_Edit_Salary_08 - Step 01: Open 'Salary' page");
+		personalDetailPage.openLeftMenuByName(driver, "Salary");
+		
+		log.info("Admin_Edit_Salary_08 - Step 02: Click on Add button Salary");
+		personalDetailPage.clickOnButtonByID(driver, "addSalary");
+		
+//		log.info("Admin_Edit_Salary_08 - Step 03: Select Pay Grade dropdownlist");
+//		personalDetailPage.selectDropdownByText("salary_sal_grd_code", "Grade 3");
+		
+		log.info("Admin_Edit_Salary_08 - Step 04: Input to Salary Component textbox");
+		personalDetailPage.inputToTextboxByID(driver, "salary_salary_component", "Senior Budget");
+		
+		log.info("Admin_Edit_Salary_08 - Step 05: Select Currency dropdownlist");
+		personalDetailPage.selectDropdownByText("salary_currency_id", "Yemeni Riyal");
+		
+		log.info("Admin_Edit_Salary_08 - Step 06: Input to Amount textbox");
+		personalDetailPage.inputToTextboxByID(driver, "salary_basic_salary", "30000");
+		
+		log.info("Admin_Edit_Salary_08 - Step 07: Check on Add Direct Deposit Details checkbox");
+		personalDetailPage.checkOnCheckboxByID("salary_set_direct_debit");
+		
+		log.info("Admin_Edit_Salary_08 - Step 08: Input to Account number textbox");
+		personalDetailPage.inputToTextboxByID(driver, "directdeposit_account", "261475653");
+		
+		log.info("Admin_Edit_Salary_08 - Step 09: Select Account Type dropdownlist");
+		personalDetailPage.selectDropdownByText("directdeposit_account_type", "Checking");
+		
+		log.info("Admin_Edit_Salary_08 - Step 10: Input to Routing Number textbox");
+		personalDetailPage.inputToTextboxByID(driver, "directdeposit_routing_num", "123456");
+		
+		log.info("Admin_Edit_Salary_08 - Step 11: Input to Amount textbox");
+		personalDetailPage.inputToTextboxByID(driver, "directdeposit_amount", "100000");
+		
+		log.info("Admin_Edit_Salary_08 - Step 12: Click on Save button Salary");
+		personalDetailPage.clickOnButtonByID(driver, "btnSalarySave");
+		
+		log.info("Admin_Edit_Salary_08 - Step 13: Verify that Salary is added successfully");
+		verifyTrue(personalDetailPage.isSalaryAdded("Senior Budget","Yemeni Riyal","30000"));
+		
+		log.info("Admin_Edit_Salary_08 - Step 14: Check on Show Direct Deposit Details checkbox");
+		personalDetailPage.checkOnCheckboxByClass("chkbox displayDirectDeposit");
+		
+		log.info("Admin_Edit_Salary_08 - Step 15: Verify that Deposit Details is added successfully");
+		verifyTrue(personalDetailPage.isDepositDetailsAdded("261475653","Checking","123456", "100000.00"));
+		
 	}
 
 	@Test

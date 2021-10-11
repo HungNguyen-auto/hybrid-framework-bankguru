@@ -19,10 +19,10 @@ public class PersonalDetailPO extends BasePage {
 	}
 
 	public void UploadNewImage(String filePath, String controlID) {
-		uploadFile(driver, PersonalDetailPageUI.UPLOAD_FILE, filePath);
+		uploadFile(driver, PersonalDetailPageUI.UPLOAD_FILE, filePath, controlID);
 
-		waitForElementClickable(driver, PersonalDetailPageUI.UPLOAD_BUTTON);
-		clickToElement(driver, PersonalDetailPageUI.UPLOAD_BUTTON);
+		waitForElementClickable(driver, PersonalDetailPageUI.UPLOAD_BUTTON, controlID);
+		clickToElement(driver, PersonalDetailPageUI.UPLOAD_BUTTON, controlID);
 	}
 
 	public void selectGenderRadioByText(String gender) {
@@ -44,9 +44,9 @@ public class PersonalDetailPO extends BasePage {
 		uploadFile(driver, PersonalDetailPageUI.UPLOAD_FILE, attachmentPath, controlID);
 	}
 
-	public boolean isAttachmentUploaded(String attachmentName) {
-		waitForElementVisible(driver,PersonalDetailPageUI.ATTACHMENT_INFO ,attachmentName);
-		return isElementDisplayed(driver,PersonalDetailPageUI.ATTACHMENT_INFO ,attachmentName);
+	public boolean isAttachmentUploaded(String tableID,String attachmentName) {
+		waitForElementVisible(driver,PersonalDetailPageUI.ATTACHMENT_INFO, tableID, attachmentName);
+		return isElementDisplayed(driver,PersonalDetailPageUI.ATTACHMENT_INFO, tableID, attachmentName);
 	}
 
 	public boolean isEmergencyContactAdded(String firstname, String relationship, String homePhone) {
@@ -64,6 +64,26 @@ public class PersonalDetailPO extends BasePage {
 		return isElementDisplayed(driver, PersonalDetailPageUI.CONTRACT_DETAILS, attachmentName);
 	}
 
+	public void checkOnCheckboxByID(String checkboxID) {
+		waitForElementClickable(driver, PersonalDetailPageUI.DYNAMIC_CHECKBOX_BY_ID, checkboxID);
+		checkToCheckboxOrRadio(driver, PersonalDetailPageUI.DYNAMIC_CHECKBOX_BY_ID, checkboxID);
+	}
+
+	public void checkOnCheckboxByClass(String checkboxClass) {
+		waitForElementClickable(driver, PersonalDetailPageUI.DYNAMIC_CHECKBOX_BY_CLASS, checkboxClass);
+		checkToCheckboxOrRadio(driver, PersonalDetailPageUI.DYNAMIC_CHECKBOX_BY_CLASS, checkboxClass);
+	}
+	
+	public boolean isSalaryAdded(String salaryComponent, String currency, String amount) {
+		waitForElementVisible(driver, PersonalDetailPageUI.SALARY_INFO, salaryComponent, currency, amount);
+		return isElementDisplayed(driver, PersonalDetailPageUI.SALARY_INFO, salaryComponent, currency, amount);
+	}
+
+	public boolean isDepositDetailsAdded(String accountNumber, String accountType, String routingNumber, String amount) {
+		waitForElementVisible(driver, PersonalDetailPageUI.DEPOSIT_INFO, accountNumber, accountType, routingNumber, amount);
+		return isElementDisplayed(driver, PersonalDetailPageUI.DEPOSIT_INFO, accountNumber, accountType, routingNumber, amount);
+	}
+
 //	public boolean isAvatarUploadedSucess() {
 //		waitForAllElementsVisible(driver, PersonalDetailPageUI.AVATAR_IMAGE);
 //		width = getAttributeValue(driver, PersonalDetailPageUI.AVATAR_IMAGE, "width");
@@ -73,5 +93,8 @@ public class PersonalDetailPO extends BasePage {
 ////			return false;
 ////		}
 //	}
+	
+	
+	
 
 }

@@ -16,9 +16,11 @@ import pageObjects.hrm.EmployeeListPO;
 import pageObjects.hrm.LoginPO;
 import pageObjects.hrm.PageGeneratorManager;
 import pageObjects.hrm.PersonalDetailPO;
+import utilities.DataUtil;
 
 public class TC_01_Login extends BaseTest {
 	WebDriver driver;
+	DataUtil fakeData;
 	LoginPO loginPage;
 	DashboardPO dashboardPage;
 	EmployeeListPO employeeListPage;
@@ -31,11 +33,13 @@ public class TC_01_Login extends BaseTest {
 	public void beforeClass(String browserName, String appUrl) {
 		log.info("Pre-Condition - Step 01: Open browser '" + browserName + "' and navigate to '" + appUrl + "'");
 		driver = getBrowserDriver(browserName, appUrl);
-		emailAddress = generateRandomEmail();
-		password = "1234aaAA";
+		fakeData = DataUtil.getData();
+		
+		emailAddress = fakeData.getEmailAddress();
+		password = fakeData.getPassword();
 		statusValue = "Enabled";
-		firstname = "henry" + rand.nextInt(99);
-		lastname = "nguyen";
+		firstname = fakeData.getFirstName();
+		lastname = fakeData.getLastName();
 		gender = "Male"; homePhone = "0357626252"; relationship = "Who am I";
 		country = "Vietnamese"; maritialStatus = "Single"; bloodType = "AB+"; attachmentName = "F Employment Application.docx";
 		filePath = GlobalConstants.UPLOAD_FOLDER_PATH + "dog.jpg";
